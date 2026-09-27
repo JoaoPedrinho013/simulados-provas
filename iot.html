@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internet das Coisas e Aplicações - Simulado</title>
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <h1>Simulados para Provas</h1>
+    <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema claro/escuro" title="Alternar tema">🌙</button>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html">Início</a>
+    <a href="entrega-continua.html">Integração e Entrega Contínua</a>
+    <a href="ux.html">Experiência do Usuário</a>
+    <a href="estatistica.html">Estatística Aplicada</a>
+    <a href="iot.html" class="active">Internet das Coisas e Aplicações</a>
+    <a href="mobile.html">Programação Mobile</a>
+    <a href="ingles.html">Inglês</a>
+  </nav>
+</header>
+
+<main>
+  <h2 class="page-title">Internet das Coisas e Aplicações</h2>
+  <p>Simulado respondido no formato Verdadeiro/Falso, com a resposta destacada e explicação de cada afirmação.</p>
+
+  <div class="quiz-toolbar">
+    <button type="button" class="print-btn" id="print-btn">🖨️ Imprimir / Salvar PDF</button>
+  </div>
+
+  <div class="topic-filter" id="topic-filter"></div>
+
+  <nav class="pagination pagination-top"></nav>
+
+  <div id="quiz-questions">
+
+  <h3 class="section-divider">Redes e Sinais Analógicos</h3>
+
+  <div class="question-card" data-topic="Redes e Sinais">
+    <div class="question-number">1</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-false">FALSO</span>
+      <div class="question-text">Wifi é usado para comunicação outdoor em projetos IoT.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> Wi-Fi tem alcance curto e alto consumo de energia, sendo indicado para ambientes internos (indoor). Para comunicação outdoor de longo alcance em IoT usam-se redes LPWAN, como LoRa, Sigfox ou NB-IoT.</div>
+  </div>
+
+  <div class="question-card" data-topic="Redes e Sinais">
+    <div class="question-number">2</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-false">FALSO</span>
+      <div class="question-text">Redes LPWAN são caracterizadas pela capacidade de transmissão de grandes volumes de dados.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> É o oposto: LPWAN (Low Power Wide Area Network) transmite pouquíssimos dados por vez, mas ganha em alcance longo e baixíssimo consumo de energia — ideal para sensores que enviam leituras pequenas e espaçadas.</div>
+  </div>
+
+  <div class="question-card" data-topic="Redes e Sinais">
+    <div class="question-number">3</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">Redes LPWAN, usadas em projetos IoT, possuem baixo consumo de energia.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> O baixo consumo é justamente a principal vantagem do LPWAN, permitindo que sensores fiquem anos funcionando com bateria pequena.</div>
+  </div>
+
+  <div class="question-card" data-topic="Redes e Sinais">
+    <div class="question-number">4</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">LoRa é um exemplo de rede LPWAN.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> LoRa (Long Range) é uma das tecnologias mais conhecidas da categoria LPWAN, junto com Sigfox e NB-IoT.</div>
+  </div>
+
+  <div class="question-card" data-topic="Redes e Sinais">
+    <div class="question-number">5</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-false">FALSO</span>
+      <div class="question-text">Um conversor A/D (analógico para digital) de 8 bits converte sinal elétrico em números no intervalo entre 0 e 1023.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> Com N bits, o conversor gera 2^N valores possíveis. Um conversor de 8 bits gera 2^8 = 256 valores, ou seja, o intervalo é 0 a 255. O intervalo 0–1023 (2^10 = 1024 valores) é característico de um conversor de <strong>10 bits</strong>.</div>
+  </div>
+
+  <div class="question-card" data-topic="Redes e Sinais">
+    <div class="question-number">6</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">O Arduino UNO usa conversor A/D de 10 bits.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> O ADC do Arduino Uno tem resolução de 10 bits, por isso <code>analogRead()</code> retorna valores de 0 a 1023.</div>
+  </div>
+
+  <div class="question-card" data-topic="Redes e Sinais">
+    <div class="question-number">7</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">Protoboards são ideais para criação e testes de protótipos de circuitos eletrônicos.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> Protoboards permitem montar e desmontar circuitos sem solda, ótimas para testes e prototipagem rápida.</div>
+  </div>
+
+  <div class="question-card" data-topic="Redes e Sinais">
+    <div class="question-number">8</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">As protoboards possuem conexões internas entre seus pontos.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> As trilhas internas da protoboard já conectam eletricamente grupos de furos (colunas nas linhas centrais e linhas nas laterais de alimentação), sem precisar de fio para isso.</div>
+  </div>
+
+  <div class="question-card" data-topic="Redes e Sinais">
+    <div class="question-number">9</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">As entradas analógicas do Arduino Uno são identificadas por: A0, A1, A2, A3, A4, A5.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> O Arduino Uno tem 6 pinos analógicos, nomeados de A0 a A5.</div>
+  </div>
+
+  <div class="question-card" data-topic="Redes e Sinais">
+    <div class="question-number">10</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">Sinal analógico é caracterizado por poder assumir qualquer valor dentro de um intervalo, normalmente associado a variáveis físicas como velocidade, temperatura, pressão, etc.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> Ao contrário do digital (que só tem dois estados, 0 ou 1), o sinal analógico varia continuamente, representando grandezas físicas do mundo real.</div>
+  </div>
+
+  <h3 class="section-divider">Entradas, Saídas e Programação Arduino</h3>
+
+  <div class="question-card" data-topic="Programação Arduino">
+    <div class="question-number">11</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-false">FALSO</span>
+      <div class="question-text">O estado de uma porta de uma sala (aberta ou fechada) seria tratado no Arduino Uno como uma Saída Digital.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> O Arduino está lendo o estado de um sensor (ex.: um sensor magnético de porta), portanto é uma <strong>entrada digital</strong> (INPUT), não uma saída. Saída digital seria algo que o Arduino controla, como acender um LED.</div>
+  </div>
+
+  <div class="question-card" data-topic="Programação Arduino">
+    <div class="question-number">12</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">Alguns pinos analógicos tem em sua identificação um ~ (til), indicando que podem ser usados para controle PWM.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> Na placa do Arduino, os pinos digitais marcados com "~" suportam saída PWM (modulação por largura de pulso).</div>
+  </div>
+
+  <div class="question-card" data-topic="Programação Arduino">
+    <div class="question-number">13</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-false">FALSO</span>
+      <div class="question-text">Função setup() é executada toda vez que um programa é carregado na placa.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> <code>setup()</code> executa apenas uma vez — no momento em que a placa liga ou é resetada, não a cada "carregamento" de programa continuamente. Depois disso quem roda em repetição é a <code>loop()</code>.</div>
+  </div>
+
+  <div class="question-card" data-topic="Programação Arduino">
+    <div class="question-number">14</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-false">FALSO</span>
+      <div class="question-text">A classe "Serial" é usada para implementar a comunicação serial entre o Arduino Uno e o sensor DHT.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> A classe <code>Serial</code> do Arduino é usada para comunicação com o computador (Monitor Serial) ou outros dispositivos via protocolo serial padrão (UART). O sensor DHT usa um protocolo próprio de comunicação em um único fio, lido por bibliotecas específicas (ex.: DHT.h), não pela classe Serial.</div>
+  </div>
+
+  <div class="question-card" data-topic="Programação Arduino">
+    <div class="question-number">15</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-false">FALSO</span>
+      <div class="question-text">Na comunicação serial cada bit (0, 1, 2, etc.) de um número binário é transmitido por um fio específico para cada bit; cada bit em um fio diferente.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> Isso descreve comunicação <strong>paralela</strong>, não serial. Na comunicação <strong>serial</strong>, todos os bits são transmitidos um após o outro, sequencialmente, por um único fio de dados.</div>
+  </div>
+
+  <h3 class="section-divider">Componentes Eletrônicos</h3>
+
+  <div class="question-card" data-topic="Componentes Eletrônicos">
+    <div class="question-number">16</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">Em resistores comuns, três faixas coloridas desenhadas neles informam o valor da resistência, sendo as duas primeiras faixas (extremidades) correspondentes a dígitos e a terceira (meio) ao multiplicador.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> No código de cores de resistores, as duas primeiras faixas formam os dois primeiros dígitos do valor, e a terceira faixa é o multiplicador (potência de 10) que define a ordem de grandeza.</div>
+  </div>
+
+  <div class="question-card" data-topic="Componentes Eletrônicos">
+    <div class="question-number">17</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">Resistores são usados em circuitos com leds para reduzir a corrente elétrica, evitando que os leds queimem.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> LEDs têm baixa resistência interna; sem um resistor limitador em série, a corrente pode ultrapassar o limite suportado e queimar o componente.</div>
+  </div>
+
+  <div class="question-card" data-topic="Componentes Eletrônicos">
+    <div class="question-number">18</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-false">FALSO</span>
+      <div class="question-text">Leds deixam passar a corrente elétrica em ambos os sentidos.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> LED é um diodo — só conduz corrente num único sentido (do ânodo para o cátodo). Ligado ao contrário, ele simplesmente não acende.</div>
+  </div>
+
+  <div class="question-card" data-topic="Componentes Eletrônicos">
+    <div class="question-number">20</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">O Cátodo de um Led deve ser ligado ao GND.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> A corrente flui do ânodo (perna maior, positivo) para o cátodo (perna menor, geralmente identificado por um lado achatado no invólucro), que deve ir ao terra/GND do circuito.</div>
+  </div>
+
+  <div class="question-card" data-topic="Componentes Eletrônicos">
+    <div class="question-number">21</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-false">FALSO</span>
+      <div class="question-text">Resistores possuem polaridade.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> Ao contrário dos LEDs, resistores não têm polaridade — podem ser ligados em qualquer um dos dois sentidos no circuito.</div>
+  </div>
+
+  <div class="question-card" data-topic="Componentes Eletrônicos">
+    <div class="question-number">22</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-false">FALSO</span>
+      <div class="question-text">Dada a instrução "pinMode(9,INPUT)", o pino 9 pode ser usado para controlar o estado de um Led (ligado/desligado).</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> Para controlar um LED (enviar sinal para ele), o pino precisa ser configurado como <strong>saída</strong> — <code>pinMode(9, OUTPUT)</code>. Configurado como <code>INPUT</code>, o pino está preparado para <em>ler</em> sinais, não para acionar o LED.</div>
+  </div>
+
+  <div class="question-card" data-topic="Componentes Eletrônicos">
+    <div class="question-number">23</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-false">FALSO</span>
+      <div class="question-text">Para a instrução "int leitura = analogRead(A0)" funcionar, deve haver na função setup() "pinMode(A0,OUTPUT)".</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> Os pinos analógicos (A0–A5) já funcionam como entrada por padrão para leitura analógica; não é necessário (e nem faria sentido) declarar <code>pinMode</code> como OUTPUT para usar <code>analogRead()</code>.</div>
+  </div>
+
+  <div class="question-card" data-topic="Componentes Eletrônicos">
+    <div class="question-number">24</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">O resistor Pull-Down é usado em circuitos eletrônicos com botões.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> Resistores pull-down (ou pull-up) garantem um estado padrão bem definido (0 ou 1) para o pino quando o botão não está pressionado, evitando leituras "flutuantes"/instáveis.</div>
+  </div>
+
+  <h3 class="section-divider">Sensores e Atuadores</h3>
+
+  <div class="question-card" data-topic="Sensores e Atuadores">
+    <div class="question-number">25</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">Sensores de luminosidade (LDR) variam a resistência elétrica conforme a intensidade luminosa incidente.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> LDR (Light Dependent Resistor) é um resistor cuja resistência elétrica diminui com mais luz e aumenta no escuro, permitindo medir luminosidade indiretamente.</div>
+  </div>
+
+  <div class="question-card" data-topic="Sensores e Atuadores">
+    <div class="question-number">26</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-false">FALSO</span>
+      <div class="question-text">DHT é um sensor usado apenas para obter a temperatura de um ambiente.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> O sensor DHT (ex.: DHT11, DHT22) mede tanto <strong>temperatura quanto umidade</strong> ao mesmo tempo, não apenas temperatura.</div>
+  </div>
+
+  <div class="question-card" data-topic="Sensores e Atuadores">
+    <div class="question-number">27</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">A sinalização PWM pode ser gerada nos pinos digitais com ~ (til).</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> O til (~) ao lado do número do pino digital na serigrafia da placa indica suporte a PWM via <code>analogWrite()</code>.</div>
+  </div>
+
+  <div class="question-card" data-topic="Sensores e Atuadores">
+    <div class="question-number">28</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">A sinalização PWM é gerada alternando rapidamente o estado de uma saída digital entre seus estados ligado e desligado.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> PWM (Pulse Width Modulation) simula um valor "analógico" ligando e desligando rapidamente a saída digital, variando a proporção de tempo ligado.</div>
+  </div>
+
+  <div class="question-card" data-topic="Sensores e Atuadores">
+    <div class="question-number">29</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">A tensão média de saída obtida com a sinalização PWM é proporcional aos tempos em que o pino digital fica no estado ligado e desligado.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> É o conceito de duty cycle: quanto maior a proporção do tempo em nível alto (ligado) dentro do período do sinal, maior a tensão média resultante.</div>
+  </div>
+
+  <div class="question-card" data-topic="Sensores e Atuadores">
+    <div class="question-number">30</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">Sensor de distância utiliza ultrassom para medição da distância.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> Sensores como o HC-SR04 emitem um pulso ultrassônico e medem o tempo até o eco retornar, calculando a distância a partir da velocidade do som.</div>
+  </div>
+
+  <div class="question-card" data-topic="Sensores e Atuadores">
+    <div class="question-number">31</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-false">FALSO</span>
+      <div class="question-text">No sensor de distância, o pino ECHO é usado para disparar o processo de medição.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> É o pino <strong>TRIG</strong> que dispara o pulso ultrassônico (inicia a medição). O pino <strong>ECHO</strong> é quem recebe/retorna o eco, ficando em nível alto durante o tempo que o som levou para ir e voltar.</div>
+  </div>
+
+  <div class="question-card" data-topic="Sensores e Atuadores">
+    <div class="question-number">32</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">No sensor de distância, a largura do pulso no pino ECHO corresponde a distância medida.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> O tempo (largura do pulso) em que o ECHO permanece em nível alto é proporcional ao tempo de ida e volta do som, e a partir dele se calcula a distância.</div>
+  </div>
+
+  <div class="question-card" data-topic="Sensores e Atuadores">
+    <div class="question-number">33</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">PPM é usado para controle de servomotores.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> Servomotores são controlados por sinal PPM (Pulse Position Modulation), onde a largura de um pulso periódico determina a posição do eixo.</div>
+  </div>
+
+  <div class="question-card" data-topic="Sensores e Atuadores">
+    <div class="question-number">34</div>
+    <div class="tf-statement">
+      <span class="tf-answer tf-true">VERDADEIRO</span>
+      <div class="question-text">O servomotor varia o ângulo de abertura conforme largura do pulso na sinalização PPM.</div>
+    </div>
+    <div class="explanation"><strong>Por quê:</strong> Cada largura de pulso específica (tipicamente entre 1ms e 2ms) corresponde a um ângulo diferente do eixo do servo.</div>
+  </div>
+
+  </div>
+
+  <nav class="pagination pagination-bottom"></nav>
+</main>
+
+<footer class="site-footer">Feito para ajudar nos estudos. Boa prova!</footer>
+
+<script src="js/site.js"></script>
+<script src="js/quiz.js"></script>
+<script>
+  const quizPagination = initQuizPagination('#quiz-questions', '.pagination', 10);
+  initTopicFilter('#quiz-questions', '#topic-filter', (topic) => quizPagination.setFilter(topic));
+  initPrintButton('#print-btn');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estatística Aplicada - Simulado</title>
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="stats-page">
+
+<header class="site-header">
+  <div class="header-top">
+    <h1>Simulados para Provas</h1>
+    <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema claro/escuro" title="Alternar tema">🌙</button>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html">Início</a>
+    <a href="entrega-continua.html">Integração e Entrega Contínua</a>
+    <a href="ux.html">Experiência do Usuário</a>
+    <a href="estatistica.html" class="active">Estatística Aplicada</a>
+    <a href="iot.html">Internet das Coisas e Aplicações</a>
+    <a href="mobile.html">Programação Mobile</a>
+    <a href="ingles.html">Inglês</a>
+  </nav>
+</header>
+
+<main>
+  <h2 class="page-title">Estatística Aplicada — Exercício Geral 1</h2>
+  <p>Resolução das 7 questões com os métodos e fórmulas das aulas do professor (distribuição de frequência, medidas de tendência central e dispersão, boxplot, curva normal e estimação). Gráficos reais e interativos, com valores nos eixos.</p>
+
+  <div class="quiz-toolbar">
+    <button type="button" class="print-btn" id="print-btn">🖨️ Imprimir / Salvar PDF</button>
+  </div>
+
+  <div class="topic-filter" id="topic-filter"></div>
+
+  <nav class="pagination pagination-top"></nav>
+
+  <div id="quiz-questions">
+
+  <section class="question-card" id="q1" data-topic="Q1 · Frequência e Gráficos">
+    <div class="qhead"><span class="qnum">Q1</span><h2>Percepção sobre o AVA</h2></div>
+    <p class="enun">44 respostas: Muito frequentemente (MF), Frequentemente (F), Eventualmente (E), Raramente (R), Nunca (N).</p>
+
+    <h3>a) Distribuição de frequência</h3>
+    <div class="f">F  = nº de vezes que a resposta aparece
+F% = (F / n) × 100        n = 44</div>
+    <div class="tw"><table>
+      <thead><tr><th>Resposta</th><th>F</th><th>F%</th></tr></thead>
+      <tbody>
+        <tr><td>Muito frequentemente (MF)</td><td>4</td><td>9,09</td></tr>
+        <tr><td>Frequentemente (F)</td><td>7</td><td>15,91</td></tr>
+        <tr class="hl"><td>Eventualmente (E)</td><td>16</td><td>36,36</td></tr>
+        <tr><td>Raramente (R)</td><td>10</td><td>22,73</td></tr>
+        <tr><td>Nunca (N)</td><td>7</td><td>15,91</td></tr>
+        <tr class="sum"><td>Σ</td><td>44</td><td>100,00</td></tr>
+      </tbody>
+    </table></div>
+    <p>Exemplo: MF → 4/44 × 100 = 9,09%. A moda é <b>Eventualmente</b> (maior frequência).</p>
+
+    <h3>b) Gráfico de colunas</h3>
+    <div class="stat-chart"><canvas id="c1" aria-label="Gráfico de colunas das respostas"></canvas></div>
+
+    <h3>c) % de respostas positivas</h3>
+    <div class="f">Positivas = MF + F = 4 + 7 = 11
+% = 11 / 44 × 100 = 25%</div>
+    <div class="ans"><b>25%</b> das respostas são positivas (9,09% + 15,91%).</div>
+  </section>
+
+  <section class="question-card" id="q2" data-topic="Q2 · Tempo de Resposta">
+    <div class="qhead"><span class="qnum">Q2</span><h2>Tempo de resposta do backend (ms)</h2></div>
+    <p class="enun">Amostra de n = 36 requisições.</p>
+    <p><b>Rol:</b> <span class="slide" style="font-size:13px">120 160 170 170 180 180 181 190 197 200 210 220 220 220 220 223 223 235 240 250 250 250 252 260 279 282 293 300 300 301 305 310 330 340 350 368</span></p>
+
+    <h3>a) Distribuição com intervalo de classe</h3>
+    <div class="f">Amplitude Total  AT = maior − menor = 368 − 120 = 248
+Nº de classes    k  = √n = √36 = 6
+Amplitude classe h  = AT / k = 248 / 6 = 41,3 ≈ 42</div>
+    <div class="tw"><table>
+      <thead><tr><th>Tempo (ms)</th><th>F</th><th>F%</th><th>Pm (x)</th><th>x·F</th><th>F·(x−x̄)²</th><th>FAC</th></tr></thead>
+      <tbody>
+        <tr><td>120 |— 162</td><td>2</td><td>5,56</td><td>141</td><td>282</td><td>22.542,72</td><td>2</td></tr>
+        <tr><td>162 |— 204</td><td>8</td><td>22,22</td><td>183</td><td>1.464</td><td>32.938,89</td><td>10</td></tr>
+        <tr class="hl"><td>204 |— 246</td><td>9</td><td>25,00</td><td>225</td><td>2.025</td><td>4.422,25</td><td>19</td></tr>
+        <tr><td>246 |— 288</td><td>7</td><td>19,44</td><td>267</td><td>1.869</td><td>2.753,53</td><td>26</td></tr>
+        <tr><td>288 |— 330</td><td>6</td><td>16,67</td><td>309</td><td>1.854</td><td>22.940,17</td><td>32</td></tr>
+        <tr><td>330 |—| 372</td><td>4</td><td>11,11</td><td>351</td><td>1.404</td><td>43.125,44</td><td>36</td></tr>
+        <tr class="sum"><td>Σ</td><td>36</td><td>100,00</td><td>–</td><td>8.898</td><td>128.723,00</td><td>–</td></tr>
+      </tbody>
+    </table></div>
+    <p>Pm = ponto médio da classe = (limite inferior + limite superior) / 2. FAC = frequência acumulada = soma de F da própria classe com as anteriores.</p>
+
+    <h3>b) Gráfico da FAC (ogiva)</h3>
+    <div class="stat-chart"><canvas id="c2" aria-label="Gráfico da frequência acumulada"></canvas></div>
+
+    <h3>c) Desvio padrão</h3>
+    <div class="f">x̄ = Σ(x·F) / n = 8.898 / 36 = 247,17 ms
+
+s = √[ Σ F·(x − x̄)² / (n − 1) ]
+s = √( 128.723 / 35 ) = √3.677,8 = 60,64 ms</div>
+    <div class="ans">Desvio padrão <b>s ≈ 60,64 ms</b>. Como os dados são amostrais, divide-se por n − 1.</div>
+
+    <h3>d) Mediana</h3>
+    <div class="f">Posição = n / 2 = 36 / 2 = 18º  → classe 204 |— 246 (FAC chega a 19)
+
+Md = L + [ (n/2 − FACant) / F ] · h
+Md = 204 + [ (18 − 10) / 9 ] · 42
+Md = 204 + 37,33 = 241,33 ms</div>
+    <div class="ans">Tempo de resposta mediano <b>≈ 241,33 ms</b>.</div>
+
+    <h3>e) Tempo médio com N/C de 95%</h3>
+    <div class="f">N/C 95% → Z = 1,96
+
+e = Z · s / √n = 1,96 · 60,64 / √36 = 1,96 · 10,11 = 19,81 ms
+
+P( x̄ − e ≤ μ ≤ x̄ + e ) = 95%
+P( 247,17 − 19,81 ≤ μ ≤ 247,17 + 19,81 ) = 95%</div>
+    <div class="ans">Com 95% de confiança, o tempo médio de resposta está entre <b>227,36 ms e 266,98 ms</b>.</div>
+
+    <h3>f) A amostra é suficiente? (erro máximo 20 ms)</h3>
+    <div class="f">n = ( Z · s / e )²
+n = ( 1,96 · 60,64 / 20 )² = ( 5,943 )² = 35,32 → 36 elementos</div>
+    <div class="ans"><b>Sim, é suficiente.</b> São necessários 36 elementos e a amostra tem exatamente 36. O item (e) confirma: a margem de erro obtida (19,81 ms) ficou abaixo dos 20 ms.</div>
+  </section>
+
+  <section class="question-card" id="q3" data-topic="Q3 · Investimento e Boxplot">
+    <div class="qhead"><span class="qnum">Q3</span><h2>Investimento em treinamento na filial (mil R$)</h2></div>
+    <p class="enun">168, 118, 195, 200, 201, 215, 209, 205, 198, 185, 212, 200 (12 meses).</p>
+
+    <h3>a) Média mensal</h3>
+    <div class="f">x̄ = Σx / n = 2.306 / 12 = 192,17 mil R$</div>
+    <div class="ans">Média mensal <b>≈ R$ 192,17 mil</b>.</div>
+
+    <h3>b) Moda</h3>
+    <p>Rol: 118 · 168 · 185 · 195 · 198 · <b>200 · 200</b> · 201 · 205 · 209 · 212 · 215</p>
+    <div class="ans">Mo = <b>R$ 200 mil</b> (único valor que se repete, 2 vezes).</div>
+
+    <h3>c) Boxplot</h3>
+    <div class="f">n = 12 (par)
+Mediana = (6º + 7º)/2 = (200 + 200)/2 = 200
+
+Posição do quartil = 1 + (n−1)·p    (p = 0,25 → Q1  |  p = 0,75 → Q3)
+Q1: posição = 1 + 11·0,25 = 3,75  → 185 + 0,75·(195 − 185) = 192,5
+Q3: posição = 1 + 11·0,75 = 9,25  → 205 + 0,25·(209 − 205) = 206
+
+AIQ = Q3 − Q1 = 206 − 192,5 = 13,5
+LS  = Q3 + 1,5·AIQ = 206 + 20,25 = 226,25
+LI  = Q1 − 1,5·AIQ = 192,5 − 20,25 = 172,25</div>
+    <div class="tw"><table>
+      <thead><tr><th>Medida (filial)</th><th>Valor</th></tr></thead>
+      <tbody>
+        <tr><td>Mediana</td><td>200</td></tr>
+        <tr><td>Quartil 1</td><td>192,5</td></tr>
+        <tr><td>Quartil 3</td><td>206</td></tr>
+        <tr><td>AIQ</td><td>13,5</td></tr>
+        <tr><td>LS</td><td>226,25</td></tr>
+        <tr><td>LI</td><td>172,25</td></tr>
+        <tr><td>Maior valor antes do LS</td><td>215</td></tr>
+        <tr><td>Menor valor antes do LI</td><td>185</td></tr>
+        <tr class="hl"><td>Outliers inferiores</td><td>118 e 168</td></tr>
+      </tbody>
+    </table></div>
+    <p class="slide">Quartis pela posição 1 + (n−1)·p.</p>
+    <div class="tw"><svg id="box" viewBox="0 0 640 170" width="100%" style="min-width:420px;max-width:100%" role="img" aria-label="Boxplot do investimento da filial"></svg></div>
+    <p>A caixa é estreita (dados concentrados entre 192,5 e 206), mas há dois meses muito abaixo do padrão (118 e 168), marcados como outliers.</p>
+
+    <h3>d) Matriz (CV = 17,43%) ou filial?</h3>
+    <div class="f">Σ(x − x̄)² = 7.741,67
+σ = √( 7.741,67 / 12 ) = √645,14 = 25,40 mil R$
+
+CV = σ / x̄ × 100 = 25,40 / 192,17 × 100 = 13,22%</div>
+    <div class="ans">CV filial = 13,22% &lt; CV matriz = 17,43%. A <b>filial</b> tem a média mais representativa (menor dispersão). Mesmo usando s com n − 1 (26,53 → CV = 13,8%), a conclusão não muda.</div>
+  </section>
+
+  <section class="question-card" id="q4" data-topic="Q4 · CPU x Tempo">
+    <div class="qhead"><span class="qnum">Q4</span><h2>CPU × tempo de resposta do servidor</h2></div>
+    <div class="tw"><table>
+      <thead><tr><th>Dia</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></thead>
+      <tbody>
+        <tr><td>CPU (%)</td><td>51</td><td>40</td><td>79</td><td>60</td><td>50</td><td>80</td><td>93</td><td>70</td><td>87</td></tr>
+        <tr><td>Tempo (ms)</td><td>145</td><td>178</td><td>201</td><td>252</td><td>281</td><td>320</td><td>279</td><td>250</td><td>263</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>a) Mediana do uso da CPU</h3>
+    <div class="f">Rol: 40 · 50 · 51 · 60 · <b>70</b> · 79 · 80 · 87 · 93
+Posição = (n + 1)/2 = (9 + 1)/2 = 5º elemento</div>
+    <div class="ans">Md = <b>70%</b> de uso da CPU.</div>
+
+    <h3>b) Média do tempo de resposta</h3>
+    <div class="f">x̄ = Σx / n = (145+178+201+252+281+320+279+250+263) / 9
+x̄ = 2.169 / 9 = 241 ms</div>
+    <div class="ans">Tempo médio de resposta = <b>241 ms</b>.</div>
+
+    <h3>c) Classificação das variáveis</h3>
+    <div class="tw"><table>
+      <thead><tr><th>Questão · variável</th><th>Tipo</th></tr></thead>
+      <tbody>
+        <tr><td>Q1 · Percepção sobre o AVA</td><td>Qualitativa ordinal</td></tr>
+        <tr><td>Q2 · Tempo de resposta (ms)</td><td>Quantitativa contínua</td></tr>
+        <tr><td>Q3 · Investimento (mil R$)</td><td>Quantitativa contínua</td></tr>
+        <tr><td>Q4 · Uso da CPU (%)</td><td>Quantitativa contínua</td></tr>
+        <tr><td>Q4 · Tempo de resposta (ms)</td><td>Quantitativa contínua</td></tr>
+        <tr><td>Q5 · Investimento anual (R$)</td><td>Quantitativa contínua</td></tr>
+        <tr><td>Q6 · Custos (mil R$)</td><td>Quantitativa contínua</td></tr>
+        <tr><td>Q7 · Armazenamento (TB)</td><td>Quantitativa contínua</td></tr>
+      </tbody>
+    </table></div>
+    <p>A resposta da Q1 é um rótulo com ordem natural (de "Nunca" a "Muito frequentemente"), por isso é ordinal. As demais são medições que podem assumir infinitos valores em um intervalo, por isso contínuas.</p>
+    <p class="slide">Complemento: diagrama de dispersão para visualizar a relação CPU × tempo.</p>
+    <div class="stat-chart"><canvas id="c4" aria-label="Dispersão CPU versus tempo de resposta"></canvas></div>
+  </section>
+
+  <section class="question-card" id="q5" data-topic="Q5 · Probabilidade">
+    <div class="qhead"><span class="qnum">Q5</span><h2>Investimento menor que R$ 50.000</h2></div>
+    <p class="enun">μ = R$ 57.500 · σ = R$ 9.700 · P(X &lt; 50.000) = ?</p>
+    <div class="f">Z = (x − μ) / σ = (50.000 − 57.500) / 9.700 = −0,77
+
+Tabela Z (0,77) → 0,2794  (área entre a média e Z)
+
+P(X &lt; 50.000) = 0,5 − 0,2794 = 0,2206</div>
+    <div class="tw"><svg id="n5" viewBox="0 0 640 200" width="100%" style="min-width:420px;max-width:100%" role="img" aria-label="Curva normal da questão 5"></svg></div>
+    <div class="ans">Probabilidade de <b>22,06%</b>. Regra: como o valor pedido é <b>menor</b> que μ, P(X &lt; x) = 0,5 − área tabelada.</div>
+  </section>
+
+  <section class="question-card" id="q6" data-topic="Q6 · Custos e Dispersão">
+    <div class="qhead"><span class="qnum">Q6</span><h2>Custos com treinamento (mai–out)</h2></div>
+
+    <h3>a) Desvio padrão</h3>
+    <div class="tw"><table>
+      <thead><tr><th>Mês</th><th>x</th><th>(x − μ)²</th><th>F% </th><th>Graus</th></tr></thead>
+      <tbody>
+        <tr><td>Maio</td><td>29</td><td>529</td><td>9,29</td><td>33,5°</td></tr>
+        <tr><td>Junho</td><td>35</td><td>289</td><td>11,22</td><td>40,4°</td></tr>
+        <tr><td>Julho</td><td>46</td><td>36</td><td>14,74</td><td>53,1°</td></tr>
+        <tr><td>Agosto</td><td>51</td><td>1</td><td>16,35</td><td>58,8°</td></tr>
+        <tr><td>Setembro</td><td>72</td><td>400</td><td>23,08</td><td>83,1°</td></tr>
+        <tr><td>Outubro</td><td>79</td><td>729</td><td>25,32</td><td>91,2°</td></tr>
+        <tr class="sum"><td>Σ</td><td>312</td><td>1.984</td><td>100</td><td>360°</td></tr>
+      </tbody>
+    </table></div>
+    <div class="f">μ = 312 / 6 = 52 mil R$
+σ = √( Σ(x − μ)² / n ) = √( 1.984 / 6 ) = √330,67 = 18,18 mil R$</div>
+    <div class="ans">Desvio padrão <b>σ ≈ R$ 18,18 mil</b>.</div>
+
+    <h3>b) Gráfico de setores</h3>
+    <div class="f">Graus = (F% / 100) × 360
+Ex.: Maio → (9,29 / 100) × 360 = 33,5°</div>
+    <div class="stat-chart"><canvas id="c6" aria-label="Gráfico de setores dos custos"></canvas></div>
+
+    <h3>c) Em qual ano a dispersão foi maior?</h3>
+    <div class="f">CV = σ / μ × 100 = 18,18 / 52 × 100 = 34,97%</div>
+    <div class="ans">CV ano passado = 34,97% &gt; 17% do ano retrasado. A dispersão foi <b>maior no ano passado</b>, porque quanto maior o CV, maior a dispersão em relação à média.</div>
+    <div class="note">O enunciado diz "coeficiente de determinação", mas pelo contexto (comparar dispersão) trata-se do <b>coeficiente de variação</b>.</div>
+  </section>
+
+  <section class="question-card" id="q7" data-topic="Q7 · Capacidade do Servidor">
+    <div class="qhead"><span class="qnum">Q7</span><h2>Capacidade do servidor ultrapassada</h2></div>
+    <p class="enun">Capacidade = 2,73 TB · μ = 1,95 TB · σ = 0,5 TB · P(X &gt; 2,73) = ?</p>
+    <div class="f">Z = (x − μ) / σ = (2,73 − 1,95) / 0,5 = 1,56
+
+Tabela Z (1,56) → 0,4406
+
+P(X &gt; 2,73) = 0,5 − 0,4406 = 0,0594</div>
+    <div class="tw"><svg id="n7" viewBox="0 0 640 200" width="100%" style="min-width:420px;max-width:100%" role="img" aria-label="Curva normal da questão 7"></svg></div>
+    <div class="ans">A chance de a capacidade ser ultrapassada no próximo mês é de <b>5,94%</b>. Regra: como o valor pedido é <b>maior</b> que μ, P(X &gt; x) = 0,5 − área tabelada.</div>
+  </section>
+
+  </div>
+
+  <nav class="pagination pagination-bottom"></nav>
+</main>
+
+<footer class="site-footer">Feito para ajudar nos estudos. Boa prova!</footer>
+
+<script src="js/site.js"></script>
+<script src="js/quiz.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const C = () => ({ink:css('--text'),muted:css('--muted'),line:css('--border'),c1:css('--chart-1'),c2:css('--chart-2'),c3:css('--chart-3'),paper:css('--card'),ans:css('--correct-border')});
+  let charts = [];
+
+  function draw(){
+    const k = C();
+    charts.forEach(c => c.destroy());
+    charts = [];
+
+    if (window.Chart) {
+      Chart.defaults.font.family = '"IBM Plex Mono", monospace';
+      Chart.defaults.color = k.muted;
+      Chart.defaults.borderColor = k.line;
+      const common = {responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}};
+
+      const c1el = document.getElementById('c1');
+      if (c1el) charts.push(new Chart(c1el, {type:'bar',
+        data:{labels:['MF','F','E','R','N'],datasets:[{data:[4,7,16,10,7],backgroundColor:[k.c2,k.c2,k.c1,k.c2,k.c2],borderRadius:3}]},
+        options:{...common,scales:{y:{beginAtZero:true,title:{display:true,text:'F'}},x:{title:{display:true,text:'Resposta'}}},
+          plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`F = ${c.raw} (${(c.raw/44*100).toFixed(2).replace('.',',')}%)`}}}}}));
+
+      const c2el = document.getElementById('c2');
+      if (c2el) charts.push(new Chart(c2el, {type:'line',
+        data:{labels:['120','162','204','246','288','330','372'],datasets:[{data:[0,2,10,19,26,32,36],borderColor:k.c1,backgroundColor:k.c1,pointRadius:4,tension:0}]},
+        options:{...common,scales:{y:{beginAtZero:true,max:40,title:{display:true,text:'FAC'}},x:{title:{display:true,text:'Limite superior (ms)'}}}}}));
+
+      const c4el = document.getElementById('c4');
+      if (c4el) charts.push(new Chart(c4el, {type:'scatter',
+        data:{datasets:[{data:[[51,145],[40,178],[79,201],[60,252],[50,281],[80,320],[93,279],[70,250],[87,263]].map(p=>({x:p[0],y:p[1]})),backgroundColor:k.c1,pointRadius:5}]},
+        options:{...common,scales:{x:{title:{display:true,text:'Uso da CPU (%)'}},y:{title:{display:true,text:'Tempo (ms)'}}}}}));
+
+      const c6el = document.getElementById('c6');
+      const vals=[29,35,46,51,72,79], tot=312;
+      if (c6el) charts.push(new Chart(c6el, {type:'pie',
+        data:{labels:['Maio','Junho','Julho','Agosto','Setembro','Outubro'],datasets:[{data:vals,
+          backgroundColor:['#9cc5d4','#6aa9bf','#3f8ba6','#1f6f8b','#d08a52','#b0602a'],borderColor:k.paper,borderWidth:2}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'right',labels:{color:k.ink,boxWidth:12}},
+          tooltip:{callbacks:{label:c=>`${c.label}: R$ ${c.raw} mil · ${(c.raw/tot*100).toFixed(2).replace('.',',')}% · ${(c.raw/tot*360).toFixed(1).replace('.',',')}°`}}}}}));
+    }
+
+    boxplot(k);
+    normal('n5',57500,9700,50000,'left','R$ 50.000','22,06%',v=>'R$ '+Math.round(v/1000)+' mil',k);
+    normal('n7',1.95,0.5,2.73,'right','2,73 TB','5,94%',v=>v.toFixed(2).replace('.',',')+' TB',k);
+  }
+
+  function boxplot(k){
+    const s = document.getElementById('box');
+    if (!s) return;
+    const lo=100, hi=240, x0=40, x1=610;
+    const X = v => x0+(v-lo)/(hi-lo)*(x1-x0);
+    let g='';
+    for(let t=100;t<=240;t+=20){g+=`<line x1="${X(t)}" y1="30" x2="${X(t)}" y2="130" stroke="${k.line}"/><text x="${X(t)}" y="150" fill="${k.muted}" font-size="11" text-anchor="middle">${t}</text>`;}
+    const y=80;
+    g+=`<line x1="${X(185)}" y1="${y}" x2="${X(192.5)}" y2="${y}" stroke="${k.ink}" stroke-width="1.5"/>`;
+    g+=`<line x1="${X(206)}" y1="${y}" x2="${X(215)}" y2="${y}" stroke="${k.ink}" stroke-width="1.5"/>`;
+    g+=`<line x1="${X(185)}" y1="${y-14}" x2="${X(185)}" y2="${y+14}" stroke="${k.ink}" stroke-width="1.5"/>`;
+    g+=`<line x1="${X(215)}" y1="${y-14}" x2="${X(215)}" y2="${y+14}" stroke="${k.ink}" stroke-width="1.5"/>`;
+    g+=`<rect x="${X(192.5)}" y="${y-24}" width="${X(206)-X(192.5)}" height="48" fill="${k.c2}" fill-opacity=".55" stroke="${k.c1}" stroke-width="1.5"/>`;
+    g+=`<line x1="${X(200)}" y1="${y-24}" x2="${X(200)}" y2="${y+24}" stroke="${k.c1}" stroke-width="3"/>`;
+    [118,168].forEach(v=>{g+=`<circle cx="${X(v)}" cy="${y}" r="5" fill="${k.c3}"/><text x="${X(v)}" y="${y-12}" fill="${k.c3}" font-size="11" text-anchor="middle">${v}</text>`;});
+    g+=`<text x="${X(192.5)}" y="${y+40}" fill="${k.muted}" font-size="10" text-anchor="end">Q1 192,5</text>`;
+    g+=`<text x="${X(206)}" y="${y+40}" fill="${k.muted}" font-size="10" text-anchor="start">Q3 206</text>`;
+    g+=`<text x="${X(200)}" y="${y-30}" fill="${k.c1}" font-size="11" text-anchor="middle">Md 200</text>`;
+    g+=`<text x="${X(185)}" y="${y+40}" fill="${k.muted}" font-size="10" text-anchor="end">185</text>`;
+    g+=`<text x="${X(215)}" y="${y+40}" fill="${k.muted}" font-size="10" text-anchor="start">215</text>`;
+    g+=`<text x="${(x0+x1)/2}" y="166" fill="${k.muted}" font-size="11" text-anchor="middle">Investimento (mil R$)</text>`;
+    s.innerHTML = g;
+  }
+
+  function normal(id,mu,sd,x,side,label,pct,fmt,k){
+    const s = document.getElementById(id);
+    if (!s) return;
+    const x0=30,x1=610,base=160,top=25;
+    const lo=mu-3.5*sd, hi=mu+3.5*sd;
+    const X = v => x0+(v-lo)/(hi-lo)*(x1-x0);
+    const pdf = v => Math.exp(-0.5*((v-mu)/sd)**2);
+    const Y = v => base-pdf(v)*(base-top);
+    let path='', area='';
+    const N=200;
+    for(let i=0;i<=N;i++){const v=lo+(hi-lo)*i/N; path+=(i?'L':'M')+X(v).toFixed(1)+','+Y(v).toFixed(1);}
+    const a=side==='left'?lo:x, b=side==='left'?x:hi;
+    area='M'+X(a)+','+base;
+    for(let i=0;i<=N;i++){const v=a+(b-a)*i/N; area+='L'+X(v).toFixed(1)+','+Y(v).toFixed(1);}
+    area+='L'+X(b)+','+base+'Z';
+    let g=`<line x1="${x0}" y1="${base}" x2="${x1}" y2="${base}" stroke="${k.line}"/>`;
+    g+=`<path d="${area}" fill="${k.c3}" fill-opacity=".45"/>`;
+    g+=`<path d="${path}" fill="none" stroke="${k.c1}" stroke-width="2"/>`;
+    g+=`<line x1="${X(mu)}" y1="${base}" x2="${X(mu)}" y2="${top}" stroke="${k.muted}" stroke-dasharray="4 4"/>`;
+    g+=`<line x1="${X(x)}" y1="${base}" x2="${X(x)}" y2="${Y(x)-6}" stroke="${k.c3}" stroke-width="2"/>`;
+    g+=`<text x="${X(mu)}" y="${base+16}" fill="${k.muted}" font-size="11" text-anchor="middle">μ = ${fmt(mu)}</text>`;
+    g+=`<text x="${X(x)}" y="${base+32}" fill="${k.c3}" font-size="11" text-anchor="middle">${label}</text>`;
+    const px = side==='left'? X(x)-40 : X(x)+40;
+    g+=`<text x="${px}" y="${Y(x)-14}" fill="${k.c3}" font-size="13" font-weight="600" text-anchor="middle">${pct}</text>`;
+    s.innerHTML = g;
+  }
+
+  window.statsRedraw = draw;
+  draw();
+
+  try{
+    matchMedia('(prefers-color-scheme: dark)').addEventListener('change', draw);
+    new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+  }catch(e){}
+})();
+</script>
+<script>
+  const quizPagination = initQuizPagination('#quiz-questions', '.pagination', 2, () => {
+    if (window.statsRedraw) window.statsRedraw();
+  });
+  initTopicFilter('#quiz-questions', '#topic-filter', (topic) => quizPagination.setFilter(topic));
+  initPrintButton('#print-btn');
+</script>
+
+</body>
+</html>

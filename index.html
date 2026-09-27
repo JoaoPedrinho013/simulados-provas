@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulados - Início</title>
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <h1>Simulados para Provas</h1>
+    <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema claro/escuro" title="Alternar tema">🌙</button>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html" class="active">Início</a>
+    <a href="entrega-continua.html">Integração e Entrega Contínua</a>
+    <a href="ux.html">Experiência do Usuário</a>
+    <a href="estatistica.html">Estatística Aplicada</a>
+    <a href="iot.html">Internet das Coisas e Aplicações</a>
+    <a href="mobile.html">Programação Mobile</a>
+    <a href="ingles.html">Inglês</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h2 class="page-title">Revisão para as provas</h2>
+    <p>Escolha uma matéria abaixo para revisar o simulado, ver as respostas destacadas e entender a explicação de cada questão.</p>
+  </div>
+
+  <div class="subject-grid">
+    <a class="subject-card" href="entrega-continua.html">
+      <h3>Integração e Entrega Contínua</h3>
+      <p>Simulado respondido com explicações de CI/CD, Docker, Git e GitHub Actions.</p>
+      <span class="status-badge status-ready">Simulado respondido</span>
+    </a>
+
+    <a class="subject-card" href="ux.html">
+      <h3>Experiência do Usuário</h3>
+      <p>Sem simulado — resumo dos tópicos das 6 aulas de UX para revisar.</p>
+      <span class="status-badge status-todo">Resumo de conteúdo</span>
+    </a>
+    <a class="subject-card" href="estatistica.html">
+      <h3>Estatística Aplicada</h3>
+      <p>Simulado respondido com gráficos reais (colunas, ogiva, boxplot, pizza, curva normal) e todas as fórmulas usadas.</p>
+      <span class="status-badge status-ready">Simulado respondido</span>
+    </a>
+
+    <a class="subject-card" href="iot.html">
+      <h3>Internet das Coisas e Aplicações</h3>
+      <p>Simulado respondido (verdadeiro/falso) com explicações sobre eletrônica, Arduino e IoT.</p>
+      <span class="status-badge status-ready">Simulado respondido</span>
+    </a>
+
+    <a class="subject-card" href="mobile.html">
+      <h3>Programação Mobile</h3>
+      <p>Sem simulado — resumo dos tópicos das 4 aulas de Kotlin/Android para revisar.</p>
+      <span class="status-badge status-todo">Resumo de conteúdo</span>
+    </a>
+
+    <a class="subject-card" href="ingles.html">
+      <h3>Inglês</h3>
+      <p>Simulado respondido (prepositions, modal verbs, vocabulário técnico) com explicação de cada resposta.</p>
+      <span class="status-badge status-ready">Simulado respondido</span>
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">Feito para ajudar nos estudos. Boa prova!</footer>
+
+<script src="js/site.js"></script>
+
+</body>
+</html>

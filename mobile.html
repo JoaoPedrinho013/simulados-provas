@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programação Mobile</title>
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <h1>Simulados para Provas</h1>
+    <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema claro/escuro" title="Alternar tema">🌙</button>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html">Início</a>
+    <a href="entrega-continua.html">Integração e Entrega Contínua</a>
+    <a href="ux.html">Experiência do Usuário</a>
+    <a href="estatistica.html">Estatística Aplicada</a>
+    <a href="iot.html">Internet das Coisas e Aplicações</a>
+    <a href="mobile.html" class="active">Programação Mobile</a>
+    <a href="ingles.html">Inglês</a>
+  </nav>
+</header>
+
+<main>
+  <h2 class="page-title">Programação Mobile</h2>
+  <p>Esta matéria não tem simulado — é um resumo dos tópicos das 4 aulas (Kotlin/Android) para revisar antes da prova.</p>
+
+  <div class="quiz-toolbar">
+    <button type="button" class="print-btn" id="print-btn">🖨️ Imprimir / Salvar PDF</button>
+  </div>
+
+  <div class="topic-filter" id="topic-filter"></div>
+
+  <nav class="pagination pagination-top"></nav>
+
+  <div id="quiz-questions">
+
+  <h3 class="section-divider">Aula 1 — Fundamentos e Introdução ao Kotlin</h3>
+
+  <div class="question-card" data-topic="Aula 1 · Fundamentos Kotlin">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Linha do tempo do mobile</div>
+    <div class="explanation"><strong>Resumo:</strong> Imprensa (1605) → Computadores (1945) → Internet (1969) → Smartphones (2007) → IoT (2009) → IA Generativa (2022). O iPhone foi lançado em 29/06/2007 e o Android em 22/10/2008. Hoje o Android é o sistema operacional mais usado do mundo (cerca de 45% de market share, à frente de Windows e iOS).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Fundamentos Kotlin">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Abordagens de desenvolvimento mobile</div>
+    <div class="explanation"><strong>Resumo:</strong> Existem três caminhos principais: <strong>Nativo</strong> (Swift para iOS, Kotlin/Java para Android — melhor performance e melhor experiência do usuário, porém mais caro); <strong>Híbrido/Web</strong> (React Native, Ionic/Capacitor — mais rápido de desenvolver); <strong>Multiplataforma</strong> (Flutter/Dart, .NET MAUI — um só código para vários sistemas).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Fundamentos Kotlin">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Como escolher a abordagem certa</div>
+    <div class="explanation"><strong>Resumo:</strong> A escolha depende de 4 fatores: <strong>Performance</strong> (crítica → nativo), <strong>Tempo de desenvolvimento</strong> (urgente → híbrido), <strong>Orçamento</strong> (nativo custa mais recursos) e <strong>Experiência do usuário</strong> (nativo oferece a melhor).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Fundamentos Kotlin">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">O que é Kotlin e sua história</div>
+    <div class="explanation"><strong>Resumo:</strong> Kotlin é uma linguagem moderna e concisa, desenvolvida pela JetBrains, lançada em 2011. Ganhou força em <strong>2017</strong> quando o Google anunciou suporte oficial ao Kotlin para desenvolvimento Android, tornando-se hoje a linguagem oficial recomendada (substituindo o Java nesse papel).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Fundamentos Kotlin">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Principais características do Kotlin</div>
+    <div class="explanation"><strong>Resumo:</strong> Segurança de nulabilidade (evita NullPointerException), sintaxe concisa, lambda expressions, integração perfeita com Java (interoperabilidade — dá para chamar código Java do Kotlin e vice-versa), permite migração gradual de projetos Java, e suporta compartilhamento de código entre plataformas (Kotlin Multiplatform).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Fundamentos Kotlin">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Variáveis: val vs var</div>
+    <div class="explanation"><strong>Resumo:</strong> <code>val</code> declara uma variável <strong>imutável</strong> (não pode ser reatribuída depois de criada — como um "final" do Java). <code>var</code> declara uma variável <strong>mutável</strong> (o valor pode mudar). Kotlin também tem inferência de tipo: não é obrigatório escrever o tipo, o compilador deduz sozinho (ex.: <code>val idade = 22</code> já é um Int).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Fundamentos Kotlin">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Casting (conversão de tipos)</div>
+    <div class="explanation"><strong>Resumo:</strong> Para converter um valor de um tipo para outro usa-se funções como <code>.toDouble()</code>, <code>.toFloat()</code>, <code>.toInt()</code> e <code>.toString()</code>. Exemplo: <code>val y: Double = x.toDouble()</code> converte um Int para Double.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Fundamentos Kotlin">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Nulabilidade e Safe Call</div>
+    <div class="explanation"><strong>Resumo:</strong> Em Kotlin, uma variável só pode receber <code>null</code> se for declarada com <code>?</code> depois do tipo (ex.: <code>var nome: String? = null</code>). Para acessar propriedades com segurança usa-se o <strong>safe call</strong> <code>?.</code> (retorna null em vez de quebrar o app se a variável for nula). Já o operador <code>!!</code> força o acesso e <strong>lança uma exceção</strong> se o valor for nulo — deve ser usado com cautela.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Fundamentos Kotlin">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Estruturas de controle: if/else e when</div>
+    <div class="explanation"><strong>Resumo:</strong> Além do <code>if/else</code> tradicional, o Kotlin tem o <code>when</code>, que é mais conciso e legível para tratar múltiplas condições/valores possíveis de uma expressão (substitui um if-else-if longo). Cada ramo usa <code>-></code> e o <code>else</code> trata o caso não previsto.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Fundamentos Kotlin">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Estruturas de repetição: for e while</div>
+    <div class="explanation"><strong>Resumo:</strong> O <code>for (i in lista)</code> percorre cada item de uma coleção. O <code>while (condição)</code> repete enquanto a condição for verdadeira. Kotlin também tem lambdas para percorrer coleções de forma funcional, como <code>lista.forEach { item -> ... }</code>.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Fundamentos Kotlin">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Funções em Kotlin</div>
+    <div class="explanation"><strong>Resumo:</strong> Declaradas com <code>fun nome(parametros): TipoRetorno { ... }</code>. Quando a função não retorna nada, o tipo de retorno é <code>Unit</code> (equivalente ao "void" de outras linguagens), e geralmente pode ser omitido.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Fundamentos Kotlin">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">POO em Kotlin: classes, objetos e data class</div>
+    <div class="explanation"><strong>Resumo:</strong> Uma <code>class</code> é o modelo para criar objetos. Kotlin permite declarar propriedades já no construtor primário: <code>class Jogo(val titulo: String, val capa: String)</code>. A <code>data class</code> é uma classe pensada para guardar dados (ex.: <code>data class Tarefa(val titulo: String, var status: String)</code>), gerando automaticamente métodos úteis como toString, equals, etc.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Fundamentos Kotlin">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Ecossistema Kotlin</div>
+    <div class="explanation"><strong>Resumo:</strong> Kotlin não é só para Android: também é usado em <strong>Backend</strong> (integrando com frameworks como Spring) e em <strong>Kotlin Multiplatform</strong>, que permite compartilhar código entre Android, iOS e Web.</div>
+  </div>
+
+  <h3 class="section-divider">Aula 2 — Android Studio e Estrutura de Projeto</h3>
+
+  <div class="question-card" data-topic="Aula 2 · Android Studio">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Android Studio e o SDK</div>
+    <div class="explanation"><strong>Resumo:</strong> Android Studio é a IDE oficial para desenvolvimento Android. Junto dela vem o <strong>Android SDK</strong> (Software Development Kit) — o kit com todas as ferramentas, APIs, bibliotecas e emuladores necessários. O SDK já vem instalado junto com o Android Studio, sem necessidade de instalação separada.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Android Studio">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Estrutura de um projeto Android</div>
+    <div class="explanation"><strong>Resumo:</strong> Dentro do projeto existe a pasta <strong>java</strong> (onde ficam os arquivos Kotlin/código do app, dentro do pacote com nome reverso do domínio, ex.: br.com.instituicao.helloworld) e a pasta <strong>res</strong> (resources), que guarda layouts, imagens e valores.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Android Studio">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Gradle: build.gradle do projeto x do módulo</div>
+    <div class="explanation"><strong>Resumo:</strong> O <strong>Gradle</strong> automatiza a compilação e gerencia dependências. O <code>build.gradle</code> do <strong>projeto</strong> guarda configurações gerais (repositórios, versão do plug-in, versão do Kotlin). Já o <code>build.gradle</code> do <strong>módulo</strong> (app) guarda configurações específicas do aplicativo: versão mínima do sistema, versão de compilação e bibliotecas usadas.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Android Studio">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Pasta res: layout, colors.xml e strings.xml</div>
+    <div class="explanation"><strong>Resumo:</strong> Em <code>res/layout</code> ficam os arquivos XML de tela (ex.: activity_main.xml). Em <code>res/values</code> ficam <code>colors.xml</code> (cores nomeadas, ex.: <code>@color/button_color</code>) e <code>strings.xml</code> (textos nomeados, ex.: <code>@string/mensagem_erro</code>) — centralizando esses valores para uso global no app.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Android Studio">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Emulador vs dispositivo físico</div>
+    <div class="explanation"><strong>Resumo:</strong> O <strong>emulador</strong> permite testar em várias versões/modelos sem precisar de aparelho físico, mas consome bastante hardware do computador. O <strong>celular real</strong> dá uso real e acesso a recursos nativos, mas depende de configurar a <strong>depuração USB</strong> e tem versão única de sistema instalada.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Android Studio">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Activity e a classe R</div>
+    <div class="explanation"><strong>Resumo:</strong> Uma <strong>Activity</strong> representa uma tela do app. A classe principal costuma se chamar <strong>MainActivity</strong> e usa <code>setContentView(R.layout.activity_main)</code> dentro de <code>onCreate()</code> para definir o conteúdo visual. A classe <strong>R</strong> (de "Resources") é gerada automaticamente e permite acessar recursos como <code>R.layout.activity_main</code>, <code>R.color.azul</code>, <code>R.drawable.background</code>.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Android Studio">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Views principais: TextView, EditText, Button</div>
+    <div class="explanation"><strong>Resumo:</strong> Todas as Views (componentes visuais) derivam da classe <strong>View</strong>. <strong>TextView</strong> exibe texto na tela; <strong>EditText</strong> é uma caixa de texto editável (entrada do usuário); <strong>Button</strong> cria um botão clicável. Todas exigem as propriedades <code>layout_width</code> e <code>layout_height</code>, que podem ser <code>match_parent</code> (ocupa todo o espaço do pai), <code>wrap_content</code> (ajusta ao conteúdo) ou um valor fixo em dp.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Android Studio">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">findViewById e setOnClickListener</div>
+    <div class="explanation"><strong>Resumo:</strong> Para manipular no Kotlin um componente definido no XML, primeiro é preciso dar um <code>android:id</code> a ele e depois localizá-lo com <code>findViewById&lt;Tipo&gt;(R.id.nome_id)</code>. Para reagir a cliques, usa-se <code>botao.setOnClickListener { ... }</code>, executando o código dentro das chaves quando o botão é clicado.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Android Studio">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Data binding manual (ligando campos e calculando)</div>
+    <div class="explanation"><strong>Resumo:</strong> Um padrão comum é ler o valor de um <code>EditText</code> com <code>.text.toString()</code>, converter para número com <code>.toInt()</code> ou <code>.toDouble()</code>, processar e depois atribuir o resultado a um <code>TextView.text</code> para exibir na tela — tudo dentro do <code>setOnClickListener</code> de um botão.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Android Studio">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Versionamento com Git/GitHub</div>
+    <div class="explanation"><strong>Resumo:</strong> O Android Studio tem integração nativa com controle de versão pelo menu <strong>VCS → Share Project on GitHub</strong>, permitindo criar o repositório remoto e autenticar direto pela IDE (via JetBrains/GitHub OAuth), sem precisar sair do ambiente de desenvolvimento.</div>
+  </div>
+
+  <h3 class="section-divider">Aula 3 — Navegação entre Telas (Activities e Intents)</h3>
+
+  <div class="question-card" data-topic="Aula 3 · Activities e Intents">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">O que são Intents</div>
+    <div class="explanation"><strong>Resumo:</strong> <strong>Intent</strong> é o objeto "mensageiro" que permite comunicação entre componentes do Android. Serve para: iniciar novas Activities, passar dados entre telas, iniciar serviços e enviar broadcasts para o sistema.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Activities e Intents">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Iniciando uma nova Activity</div>
+    <div class="explanation"><strong>Resumo:</strong> Cria-se um Intent apontando para a Activity de destino e chama-se <code>startActivity()</code>:<br><code>val intent = Intent(this, SegundaActivity::class.java)<br>startActivity(intent)</code></div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Activities e Intents">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Passando dados entre Activities</div>
+    <div class="explanation"><strong>Resumo:</strong> Usa-se <code>intent.putExtra("chave", valor)</code> na Activity de origem para enviar um dado, e <code>intent.getStringExtra("chave")</code> (ou o getter equivalente ao tipo) na Activity de destino para recuperá-lo. É essencial usar <strong>a mesma chave</strong> nos dois lados.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Activities e Intents">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Pilha de navegação (back stack)</div>
+    <div class="explanation"><strong>Resumo:</strong> Cada vez que uma Activity abre outra, a nova é empilhada sobre a anterior (back stack). Isso significa que abrir Activities sem controle pode acumular várias na pilha, consumindo memória RAM desnecessariamente — por isso é importante saber quando usar <code>finish()</code> para retirar uma Activity da pilha.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Activities e Intents">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Ciclo de vida da Activity</div>
+    <div class="explanation"><strong>Resumo:</strong> Sequência principal: <code>onCreate()</code> → <code>onStart()</code> → <code>onResume()</code> (Activity em execução/visível) → <code>onPause()</code> (perde foco) → <code>onStop()</code> (não está mais visível) → <code>onDestroy()</code> (finalizada). Se o usuário volta à Activity depois de parada, passa por <code>onRestart()</code> antes de <code>onStart()</code> de novo. Esse ciclo é um dos temas mais cobrados em prova.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Activities e Intents">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Duas formas de definir o conteúdo da tela</div>
+    <div class="explanation"><strong>Resumo:</strong> 1) Montar o layout inteiro em código Kotlin e passar direto no <code>setContentView(objeto)</code> — só se vê o resultado ao rodar o app, e mistura layout com lógica. 2) Usar um arquivo <strong>XML</strong> separado (o mais comum) e referenciá-lo com <code>setContentView(R.layout.activity_main)</code> — separa responsabilidades e permite usar a pré-visualização (Preview) do Android Studio.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Activities e Intents">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">AndroidX e AppCompatActivity</div>
+    <div class="explanation"><strong>Resumo:</strong> <code>AppCompatActivity</code> (do pacote <code>androidx.appcompat.app</code>) não faz parte do SDK puro do Android, e sim da biblioteca <strong>AndroidX</strong> (parte do Android Jetpack). Ela existe para dar <strong>retrocompatibilidade</strong>, permitindo usar recursos modernos mesmo em versões antigas do Android.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Activities e Intents">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Floating Action Button (FAB) e finish()</div>
+    <div class="explanation"><strong>Resumo:</strong> O <strong>Floating Action Button</strong> é um componente do Material Design (botão circular flutuante) comumente usado para abrir uma nova tela via Intent. Já o método <code>finish()</code> encerra a Activity atual e a remove da pilha de navegação — muito usado em botões de "voltar".</div>
+  </div>
+
+  <h3 class="section-divider">Aula 4 — DAO (Acesso a Dados)</h3>
+
+  <div class="question-card" data-topic="Aula 4 · DAO">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">O que é o padrão DAO</div>
+    <div class="explanation"><strong>Resumo:</strong> <strong>DAO</strong> (Data Access Object) é um padrão de projeto para <strong>abstrair a lógica de acesso a dados</strong>, separando essa responsabilidade da interface. Vantagens: organiza o código, facilita manutenção, e permite trocar a fonte de dados (banco de dados, API) sem afetar o resto da aplicação.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 4 · DAO">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Estrutura básica de um DAO</div>
+    <div class="explanation"><strong>Resumo:</strong> Na prática: cria-se um pacote <code>dao</code>, uma classe (ex.: <code>ProdutoDao</code>) com métodos para <strong>adicionar</strong> e <strong>retornar</strong> dados, geralmente usando um <code>companion object</code> para guardar a lista/coleção de dados de forma compartilhada.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 4 · DAO">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">companion object</div>
+    <div class="explanation"><strong>Resumo:</strong> É a forma do Kotlin de criar <strong>membros estáticos</strong> dentro de uma classe — acessíveis diretamente pelo nome da classe, sem precisar instanciá-la. Muito usado em DAOs para manter uma lista de dados compartilhada entre chamadas.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 4 · DAO">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Log para depuração</div>
+    <div class="explanation"><strong>Resumo:</strong> O Android Studio oferece a classe <code>Log</code> com diferentes níveis: <code>i</code> (info), <code>d</code> (debug), <code>e</code> (error), <code>v</code> (verbose) e <code>w</code> (warning). Exemplo: <code>Log.i("MinhaActivity", "onCreate: $nome")</code> — essencial para depurar o app durante o desenvolvimento (aparece no Logcat).</div>
+  </div>
+
+  </div>
+
+  <nav class="pagination pagination-bottom"></nav>
+</main>
+
+<footer class="site-footer">Feito para ajudar nos estudos. Boa prova!</footer>
+
+<script src="js/site.js"></script>
+<script src="js/quiz.js"></script>
+<script>
+  const quizPagination = initQuizPagination('#quiz-questions', '.pagination', 10);
+  initTopicFilter('#quiz-questions', '#topic-filter', (topic) => quizPagination.setFilter(topic));
+  initPrintButton('#print-btn');
+</script>
+
+</body>
+</html>

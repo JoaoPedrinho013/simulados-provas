@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiência do Usuário</title>
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <h1>Simulados para Provas</h1>
+    <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema claro/escuro" title="Alternar tema">🌙</button>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html">Início</a>
+    <a href="entrega-continua.html">Integração e Entrega Contínua</a>
+    <a href="ux.html" class="active">Experiência do Usuário</a>
+    <a href="estatistica.html">Estatística Aplicada</a>
+    <a href="iot.html">Internet das Coisas e Aplicações</a>
+    <a href="mobile.html">Programação Mobile</a>
+    <a href="ingles.html">Inglês</a>
+  </nav>
+</header>
+
+<main>
+  <h2 class="page-title">Experiência do Usuário</h2>
+  <p>Esta matéria não tem simulado — é um resumo dos tópicos das 6 aulas (UX) para revisar antes da prova.</p>
+
+  <div class="quiz-toolbar">
+    <button type="button" class="print-btn" id="print-btn">🖨️ Imprimir / Salvar PDF</button>
+  </div>
+
+  <div class="topic-filter" id="topic-filter"></div>
+
+  <nav class="pagination pagination-top"></nav>
+
+  <div id="quiz-questions">
+
+  <h3 class="section-divider">Aula 1 — Introdução à Experiência do Usuário</h3>
+
+  <div class="question-card" data-topic="Aula 1 · Introdução a UX">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">O que é UX (User Experience)</div>
+    <div class="explanation"><strong>Resumo:</strong> É a forma como uma pessoa percebe, utiliza e se relaciona com um produto, sistema ou serviço. Envolve facilidade de uso, utilidade, acessibilidade, eficiência e satisfação — além de emoções, expectativas e o contexto de uso.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Introdução a UX">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">UX x UI — a diferença fundamental</div>
+    <div class="explanation"><strong>Resumo:</strong> São conceitos relacionados, mas diferentes. <strong>UX</strong> trata de experiência, usabilidade, fluxos, necessidades e satisfação (como funciona e como o usuário vivencia). <strong>UI</strong> (User Interface) trata de cores, tipografia, botões, ícones e layout (como a interface se apresenta visualmente).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Introdução a UX">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Por que UX é importante</div>
+    <div class="explanation"><strong>Resumo:</strong> Reduz erros e dificuldades de uso, facilita o aprendizado, aumenta a produtividade, melhora satisfação e confiança, reduz abandono/aumenta adoção, e contribui para acessibilidade e inclusão. Lembre: "um sistema tecnicamente correto pode fracassar se for difícil de usar."</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Introdução a UX">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">O usuário no centro (empatia)</div>
+    <div class="explanation"><strong>Resumo:</strong> Projetar pensando em quem vai usar o sistema: quem são, o que precisam, quais objetivos e dificuldades têm, em que contexto e com quais dispositivos usam o sistema. UX exige empatia — não se deve projetar apenas pensando em si mesmo.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Introdução a UX">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Métodos para conhecer o usuário</div>
+    <div class="explanation"><strong>Resumo:</strong> Entrevistas (conversar com usuários), Questionários (coletar respostas de várias pessoas), Observação (ver a tarefa acontecendo), Testes (identificar dificuldades de uso), Personas (representar perfis de usuários) e Jornada (mapear etapas e experiências).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Introdução a UX">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Usabilidade</div>
+    <div class="explanation"><strong>Resumo:</strong> É a facilidade com que uma pessoa utiliza um sistema para atingir seus objetivos. Três critérios centrais: <strong>fácil de aprender</strong> (o usuário entende rápido como começar), <strong>eficiente</strong> (realiza tarefas com pouco esforço) e <strong>tolerante a erros</strong> (ajuda a evitar e corrigir erros).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Introdução a UX">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">As 10 Heurísticas de Usabilidade (Nielsen)</div>
+    <div class="explanation"><strong>Resumo:</strong> São princípios de referência para avaliar interfaces: 1) Visibilidade do estado do sistema; 2) Correspondência com o mundo real; 3) Controle e liberdade do usuário; 4) Consistência; 5) Prevenção de erros; 6) Reconhecimento em vez de memorização; 7) Flexibilidade e eficiência; 8) Design minimalista; 9) Recuperação de erros; 10) Ajuda e documentação. Uma heurística funciona como um atalho mental que permite tomar decisões rápidas diante de problemas complexos.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Introdução a UX">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Acessibilidade em UX</div>
+    <div class="explanation"><strong>Resumo:</strong> Uma boa experiência considera pessoas com deficiência visual, auditiva, motora ou cognitiva, diferentes faixas etárias e níveis de conhecimento tecnológico, e diferentes dispositivos/ambientes. Boas práticas: contraste adequado, textos legíveis, navegação por teclado, descrição de imagens, legendas em vídeos, feedback visual e sonoro. <strong>Acessibilidade não é um recurso extra — é parte de uma boa experiência.</strong></div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 1 · Introdução a UX">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Processo de UX (ciclo iterativo)</div>
+    <div class="explanation"><strong>Resumo:</strong> Pesquisar → Compreender → Definir → Criar → Prototipar → Testar → Melhorar. É um ciclo, não uma linha reta: testa-se, aprende-se, corrige-se e testa-se de novo — a solução evolui com evidências e feedback dos usuários.</div>
+  </div>
+
+  <h3 class="section-divider">Aula 2 — Perfil do Usuário e Persona</h3>
+
+  <div class="question-card" data-topic="Aula 2 · Perfil e Persona">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">O que é Perfil do Usuário</div>
+    <div class="explanation"><strong>Resumo:</strong> É uma visão abrangente do público que utiliza ou poderá utilizar um produto — ajuda a identificar características, necessidades e comportamentos gerais, considerando fatores como idade, profissão, conhecimentos, objetivos e dificuldades.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Perfil e Persona">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Por que conhecer o usuário (evitar achismos)</div>
+    <div class="explanation"><strong>Resumo:</strong> Evita decisões baseadas em opiniões da equipe; ajuda a definir funcionalidades que realmente trazem valor; facilita decisões de interface (linguagem visual, tom de voz); previne problemas de usabilidade antes do desenvolvimento; e mantém o foco humano — a pessoa usuária no centro de todas as decisões.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Perfil e Persona">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Principais informações do Perfil do Usuário</div>
+    <div class="explanation"><strong>Resumo:</strong> Dados demográficos (idade, escolaridade, localização, profissão), Contexto de uso (onde/quando/como usa), Objetivos (o que deseja realizar), Necessidades (o que precisa para atingir os objetivos), Dificuldades (obstáculos e frustrações) e Conhecimento tecnológico (iniciante, intermediário ou avançado).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Perfil e Persona">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">O que é Persona</div>
+    <div class="explanation"><strong>Resumo:</strong> É um personagem fictício criado a partir de dados e características reais de um grupo de usuários, representando um usuário arquetípico. Tem identidade completa (nome, idade, profissão, objetivos, necessidades e dificuldades) e serve como referência constante durante o design e as decisões do projeto.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Perfil e Persona">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Persona x Perfil do Usuário</div>
+    <div class="explanation"><strong>Resumo:</strong> <strong>Perfil do Usuário</strong> = visão macroscópica: geral e abrangente, com dados agregados e foco em segmentos demográficos/mercado. <strong>Persona</strong> = visão humanizada: mais específica, cria um personagem fictício baseado em dados reais, gera empatia e norteia a experiência prática.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Perfil e Persona">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Como criar uma Persona</div>
+    <div class="explanation"><strong>Resumo:</strong> 1) Pesquise os usuários (entrevistas, questionários, observações); 2) Identifique padrões (comportamentos repetidos); 3) Escolha o grupo mais relevante; 4) Crie a identidade (nome, imagem, perfil, contexto); 5) Mapeie objetivos, necessidades e dificuldades; 6) Use a persona para guiar todas as decisões do time.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 2 · Perfil e Persona">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Boas práticas ao criar Personas</div>
+    <div class="explanation"><strong>Resumo:</strong> Baseie em pesquisa real (nunca em estereótipos/suposições); priorize — não crie personas demais, foque nas mais relevantes; mantenha objetividade (informações úteis e diretas); mantenha atualizada conforme surgem novos dados. Pergunta de ouro: "essa decisão de interface atende às necessidades da nossa persona?"</div>
+  </div>
+
+  <h3 class="section-divider">Aula 3 — Jornada do Usuário e do Consumidor</h3>
+
+  <div class="question-card" data-topic="Aula 3 · Jornada do Usuário">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">O que é a Jornada do Usuário</div>
+    <div class="explanation"><strong>Resumo:</strong> É a representação das etapas pelas quais uma pessoa passa para atingir um objetivo. Considera não só as telas do sistema, mas também o contexto antes, durante e depois da interação — ajudando a equipe a enxergar a experiência do ponto de vista do usuário.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Jornada do Usuário">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Jornada do Usuário x Jornada do Consumidor</div>
+    <div class="explanation"><strong>Resumo:</strong> A <strong>Jornada do Usuário</strong> foca a interação com um produto/sistema específico (ex.: abrir um app e concluir uma tarefa). A <strong>Jornada do Consumidor</strong> é mais ampla, abrangendo a relação com a marca: descoberta, consideração, compra, uso, suporte e fidelização. As duas podem se complementar.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Jornada do Usuário">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Por que mapear a jornada</div>
+    <div class="explanation"><strong>Resumo:</strong> Descobre pontos de fricção que não aparecem só olhando a interface; ajuda a compreender emoções e expectativas em cada etapa; prioriza problemas de maior impacto; encontra oportunidades de inovação; e alinha designers, desenvolvedores, produto, atendimento e negócio.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Jornada do Usuário">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Elementos de um Mapa de Jornada</div>
+    <div class="explanation"><strong>Resumo:</strong> Persona (quem é), Objetivo (o que quer realizar), Etapas (passos percorridos), Touchpoints (onde interage), Pensamentos (o que espera/imagina), Emoções (como se sente), Dores (o que dificulta) e Oportunidades (como melhorar).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Jornada do Usuário">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Etapas típicas da jornada</div>
+    <div class="explanation"><strong>Resumo:</strong> 1) Descoberta (percebe uma necessidade); 2) Consideração (pesquisa e compara opções); 3) Decisão (escolhe uma solução); 4) Uso (interage e realiza a tarefa); 5) Pós-uso (avalia, recomenda ou solicita suporte).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Jornada do Usuário">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Touchpoints (pontos de contato)</div>
+    <div class="explanation"><strong>Resumo:</strong> Touchpoint é qualquer ponto em que o usuário entra em contato com a experiência. Pode ser <strong>Digital</strong> (site, app, chatbot, e-mail, redes sociais), <strong>Físico</strong> (loja, caixa, embalagem, equipamento) ou <strong>Humano</strong> (vendedor, suporte, atendente). Importante: o usuário percebe a experiência como um todo, não como departamentos isolados.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Jornada do Usuário">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Emoções, Dores e Fricções — a diferença</div>
+    <div class="explanation"><strong>Resumo:</strong> <strong>Emoção</strong> é o sentimento do usuário em cada etapa (ex.: frustrado, aliviado, satisfeito). <strong>Dor</strong> é um problema ou dificuldade que incomoda o usuário na experiência (ex.: sistema lento, mensagem de erro confusa). <strong>Fricção</strong> é qualquer coisa que torna a jornada mais difícil, lenta ou confusa — atrapalha o usuário de chegar ao objetivo (ex.: exigir muitas etapas de cadastro antes de finalizar uma compra).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Jornada do Usuário">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Como construir um Mapa de Jornada</div>
+    <div class="explanation"><strong>Resumo:</strong> 1) Defina a persona e o objetivo da jornada; 2) Colete dados (entrevistas, observação, testes, analytics); 3) Liste etapas e touchpoints; 4) Registre ações, pensamentos, emoções e dores; 5) Identifique momentos críticos e oportunidades; 6) Valide o mapa com usuários e com a equipe.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 3 · Jornada do Usuário">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Do mapa para a melhoria da experiência</div>
+    <div class="explanation"><strong>Resumo:</strong> Mapear a jornada não é o objetivo final — o valor está nas decisões tomadas a partir dela. Priorize dores por impacto, frequência e esforço de resolução; transforme oportunidades em hipóteses de melhoria; crie protótipos, teste com usuários e meça resultados; repita o processo, pois jornadas evoluem com o produto e o comportamento das pessoas.</div>
+  </div>
+
+  <h3 class="section-divider">Aula 4 — Pesquisa com Usuários: Qualitativa</h3>
+
+  <div class="question-card" data-topic="Aula 4 · Pesquisa Qualitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">O que é Pesquisa Qualitativa</div>
+    <div class="explanation"><strong>Resumo:</strong> É uma investigação para compreender profundamente a experiência do usuário — busca descobrir <strong>como e por que</strong> as pessoas agem de determinada maneira. Trabalha principalmente com relatos, observações e comportamentos (ex.: descobrir por que um usuário abandona um cadastro).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 4 · Pesquisa Qualitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Qualitativa x Quantitativa</div>
+    <div class="explanation"><strong>Resumo:</strong> <strong>Qualitativa</strong> busca compreender o <strong>porquê</strong> (entrevistas, observação, testes). <strong>Quantitativa</strong> busca medir o <strong>quanto</strong> (questionários, métricas, estatísticas). Exemplo clássico: "70% abandonam o cadastro" é quantitativo; "por que abandonam?" é qualitativo.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 4 · Pesquisa Qualitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Principais técnicas de pesquisa qualitativa</div>
+    <div class="explanation"><strong>Resumo:</strong> Entrevista com usuários, Observação, Teste de Usabilidade, Grupo Focal (Focus Group), Pesquisa Contextual/estudo de campo e Card Sorting.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 4 · Pesquisa Qualitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Entrevistas</div>
+    <div class="explanation"><strong>Resumo:</strong> É uma conversa planejada com usuários reais. Use perguntas abertas ("Como você faz...?", "O que dificulta...?", "Por quê?"), evite induzir a resposta e registre frases e comportamentos importantes.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 4 · Pesquisa Qualitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Observação</div>
+    <div class="explanation"><strong>Resumo:</strong> O pesquisador observa o usuário realizando uma tarefa real. Não basta perguntar o que ele faria — é importante observar o que ele <strong>realmente</strong> faz: erros, dúvidas, pausas, desvios e estratégias.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 4 · Pesquisa Qualitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Teste de Usabilidade</div>
+    <div class="explanation"><strong>Resumo:</strong> Um usuário recebe tarefas e tenta realizá-las no sistema, enquanto o pesquisador observa sem interferir desnecessariamente (ex.: "encontre um tênis preto tamanho 40 e finalize a compra"). Registra-se tempo, erros, dúvidas, cliques inesperados e comentários — o objetivo é encontrar problemas de uso.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 4 · Pesquisa Qualitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Focus Group e Pesquisa Contextual</div>
+    <div class="explanation"><strong>Resumo:</strong> <strong>Focus Group</strong> reúne um pequeno grupo, conduzido por um moderador, para explorar opiniões e percepções diferentes — mas opinião de grupo não substitui teste individual de usabilidade. <strong>Pesquisa Contextual</strong> acontece no ambiente real do usuário, ajudando a entender contexto, ferramentas e limitações reais de uso.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 4 · Pesquisa Qualitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Como fazer uma pesquisa qualitativa</div>
+    <div class="explanation"><strong>Resumo:</strong> 1) Defina o objetivo; 2) Escolha o perfil dos participantes; 3) Prepare roteiro e tarefas; 4) Colete dados; 5) Organize os registros; 6) Procure padrões; 7) Transforme descobertas em insights; 8) Proponha melhorias.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 4 · Pesquisa Qualitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Boas práticas e cuidados éticos na pesquisa</div>
+    <div class="explanation"><strong>Resumo:</strong> Escolha participantes representativos do público; peça autorização antes de gravar; preserve privacidade e dados pessoais; não julgue o usuário (o problema pode estar no sistema); evite perguntas que induzam respostas; documente evidências antes de propor soluções.</div>
+  </div>
+
+  <h3 class="section-divider">Aula 5 — Pesquisa com Usuários: Quantitativa</h3>
+
+  <div class="question-card" data-topic="Aula 5 · Pesquisa Quantitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">O que é Pesquisa Quantitativa</div>
+    <div class="explanation"><strong>Resumo:</strong> Investiga um problema usando dados que podem ser medidos e comparados. Segue o ciclo: Perguntar (coletar respostas) → Medir (transformar em números) → Comparar (encontrar padrões) → Decidir (orientar melhorias). Pergunta típica: "Quantos usuários enfrentam este problema?"</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 5 · Pesquisa Quantitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Para que serve a pesquisa quantitativa</div>
+    <div class="explanation"><strong>Resumo:</strong> Não é só "ter números" — serve para <strong>Medir</strong> (satisfação, facilidade, esforço), <strong>Priorizar</strong> (problemas mais frequentes), <strong>Comparar</strong> (versões, públicos, jornadas) e <strong>Validar</strong> (se uma mudança melhorou uma métrica).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 5 · Pesquisa Quantitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Tipos de perguntas em questionários</div>
+    <div class="explanation"><strong>Resumo:</strong> Múltipla escolha (categorias), Escala (intensidade, ex.: nota de 1 a 5), Sim/Não (ocorrência), Ranking (prioridade — ordenar por importância) e Numérica (quantidade). Cuidado: evite juntar duas ideias numa mesma pergunta (ex.: "Você gostou do sistema e achou fácil?").</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 5 · Pesquisa Quantitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Escalas de avaliação</div>
+    <div class="explanation"><strong>Resumo:</strong> Transformam percepções em valores comparáveis (ex.: escala de 1 a 5, de "discordo muito" a "concordo muito"). Cuidados: não misturar escalas diferentes na mesma pesquisa (ex.: 1–5 numa pergunta e 1–10 noutra), definir claramente o que cada extremo significa, e lembrar que uma média sozinha não explica o motivo da avaliação.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 5 · Pesquisa Quantitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Amostra e participantes</div>
+    <div class="explanation"><strong>Resumo:</strong> Raramente se pesquisa todos os usuários — trabalha-se com uma <strong>amostra</strong> que deve representar o público-alvo. O tamanho ideal depende do objetivo, diversidade e nível de confiança desejado. Atenção ao <strong>viés de amostra</strong>: quem responde pode não representar quem não responde.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 5 · Pesquisa Quantitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Métricas importantes em UX</div>
+    <div class="explanation"><strong>Resumo:</strong> <strong>CSAT</strong> (Satisfação — "quão satisfeito você está?"), <strong>NPS</strong> (Recomendação — "de 0 a 10, recomendaria?"), <strong>CES</strong> (Esforço — "foi fácil resolver?") e <strong>Taxa de Sucesso</strong> ("conseguiu concluir?"). Uma boa métrica é aquela que ajuda a responder uma pergunta de negócio ou de UX.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 5 · Pesquisa Quantitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Como analisar os resultados</div>
+    <div class="explanation"><strong>Resumo:</strong> 1) Frequência (quantas respostas em cada opção); 2) Percentual (proporção de cada resposta); 3) Média/mediana (valor central); 4) Comparação (diferença entre grupos ou versões); 5) Interpretação (o que isso significa para a UX).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 5 · Pesquisa Quantitativa">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Erros comuns em pesquisas quantitativas</div>
+    <div class="explanation"><strong>Resumo:</strong> Pergunta tendenciosa (induz a resposta), Dupla pergunta (duas ideias numa só), Amostra inadequada (ex.: só pesquisar a própria equipe), Escala confusa (misturar sentidos, ex.: "1 = ótimo" numa e "1 = péssimo" noutra), Excesso de perguntas (gera abandono) e Conclusão exagerada (confundir correlação com causa). Regra de ouro: definir objetivo, público e uso do resultado antes de coletar dados.</div>
+  </div>
+
+  <h3 class="section-divider">Aula 6 — Design Thinking</h3>
+
+  <div class="question-card" data-topic="Aula 6 · Design Thinking">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">O que é Design Thinking</div>
+    <div class="explanation"><strong>Resumo:</strong> É uma abordagem centrada no ser humano para solucionar problemas complexos e gerar inovação. Combina empatia, criatividade e razão para atender necessidades reais dos usuários e gerar valor de negócio. Funciona mais como um <strong>mindset</strong> de colaboração e experimentação rápida do que como um conjunto fixo de ferramentas.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 6 · Design Thinking">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">As 5 etapas do Design Thinking</div>
+    <div class="explanation"><strong>Resumo:</strong> 1) <strong>Empatia</strong> — entender dores, necessidades e sentimentos do público; 2) <strong>Definição</strong> — organizar os dados coletados e definir com clareza o verdadeiro problema; 3) <strong>Ideação</strong> — gerar o maior número de ideias criativas (brainstorming); 4) <strong>Prototipação</strong> — transformar as melhores ideias em modelos tangíveis (MVP); 5) <strong>Validação/Testes</strong> — apresentar o protótipo aos usuários e ajustar. O processo é <strong>iterativo</strong>: pode-se voltar a qualquer etapa.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 6 · Design Thinking">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Empatizar</div>
+    <div class="explanation"><strong>Resumo:</strong> Etapa de conhecer as pessoas a fundo, usando técnicas como entrevista, observação, questionário e jornada do usuário. Exemplo: perguntar a alunos "como você acompanha as atividades?" pode revelar que a dificuldade é a dispersão das informações em vários canais diferentes.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 6 · Design Thinking">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Definir</div>
+    <div class="explanation"><strong>Resumo:</strong> Transforma os dados coletados numa declaração clara do problema — não numa solução pronta. Exemplo: em vez de "precisamos criar um aplicativo de tarefas" (❌ solução), o correto é "alunos precisam visualizar seus próximos prazos em um único lugar porque atualmente consultam diferentes canais" (✅ necessidade).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 6 · Design Thinking">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Idear</div>
+    <div class="explanation"><strong>Resumo:</strong> Etapa de gerar o maior número possível de ideias em grupo (brainstorming), sem julgar de início — "primeiro quantidade, depois avaliação". Um mesmo problema (ex.: fila grande na cantina) pode gerar várias soluções diferentes (pedido antecipado, QR Code, senha digital, etc.).</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 6 · Design Thinking">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Prototipar</div>
+    <div class="explanation"><strong>Resumo:</strong> Transforma as melhores ideias em modelos tangíveis, evoluindo por fidelidade: <strong>baixa fidelidade</strong> (desenho no papel) → <strong>média</strong> (wireframe, ex.: no Figma) → <strong>alta</strong> (protótipo navegável). Não é preciso programar para aprender com o protótipo.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 6 · Design Thinking">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Testar / Validar</div>
+    <div class="explanation"><strong>Resumo:</strong> O protótipo é apresentado a usuários reais para observar o uso, coletar feedback e aprender com os erros, ajustando a solução antes de investir em desenvolvimento completo.</div>
+  </div>
+
+  <div class="question-card" data-topic="Aula 6 · Design Thinking">
+    <div class="question-number">Tópico</div>
+    <div class="question-text">Erros comuns em Design Thinking</div>
+    <div class="explanation"><strong>Resumo:</strong> Criar a solução antes de pesquisar; entrevistar somente amigos; ignorar opiniões diferentes; confundir opinião com evidência (ex.: "eu acho esse botão fácil" não substitui observar usuários reais); fazer um protótipo perfeito cedo demais; e testar apenas com a própria equipe.</div>
+  </div>
+
+  </div>
+
+  <nav class="pagination pagination-bottom"></nav>
+</main>
+
+<footer class="site-footer">Feito para ajudar nos estudos. Boa prova!</footer>
+
+<script src="js/site.js"></script>
+<script src="js/quiz.js"></script>
+<script>
+  const quizPagination = initQuizPagination('#quiz-questions', '.pagination', 10);
+  initTopicFilter('#quiz-questions', '#topic-filter', (topic) => quizPagination.setFilter(topic));
+  initPrintButton('#print-btn');
+</script>
+
+</body>
+</html>

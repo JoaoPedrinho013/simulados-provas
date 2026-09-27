@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Integração e Entrega Contínua - Simulado</title>
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <h1>Simulados para Provas</h1>
+    <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema claro/escuro" title="Alternar tema">🌙</button>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html">Início</a>
+    <a href="entrega-continua.html" class="active">Integração e Entrega Contínua</a>
+    <a href="ux.html">Experiência do Usuário</a>
+    <a href="estatistica.html">Estatística Aplicada</a>
+    <a href="iot.html">Internet das Coisas e Aplicações</a>
+    <a href="mobile.html">Programação Mobile</a>
+    <a href="ingles.html">Inglês</a>
+  </nav>
+</header>
+
+<main>
+  <h2 class="page-title">Integração e Entrega Contínua</h2>
+  <p>Simulado respondido, com a resposta correta destacada e explicação de cada questão.</p>
+
+  <div class="quiz-toolbar">
+    <button type="button" class="print-btn" id="print-btn">🖨️ Imprimir / Salvar PDF</button>
+  </div>
+
+  <div class="topic-filter" id="topic-filter"></div>
+
+  <nav class="pagination pagination-top"></nav>
+
+  <div id="quiz-questions">
+
+  <h3 class="section-divider">CI/CD - Conceitos Gerais</h3>
+
+  <div class="question-card" data-topic="Conceitos Gerais">
+    <div class="question-number">Questão 1</div>
+    <div class="question-text">Qual é o objetivo principal da Integração Contínua (CI)?</div>
+    <ul class="options">
+      <li>A. Automatizar a implementação de software diretamente no ambiente de produção.</li>
+      <li class="correct">B. Mesclar com frequência alterações de código num repositório partilhado, validando-as com testes automáticos.</li>
+      <li>C. Gerir a infraestrutura do servidor através de código (IaC).</li>
+      <li>D. Substituir a necessidade de programadores realizarem testes unitários manuais.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> CI é sobre integrar código com frequência (várias vezes ao dia) num repositório compartilhado, rodando testes automáticos a cada mudança para detectar problemas cedo. Deploy em produção é papel do CD, não do CI.</div>
+  </div>
+
+  <div class="question-card" data-topic="Conceitos Gerais">
+    <div class="question-number">Questão 2</div>
+    <div class="question-text">Qual é a diferença fundamental entre Entrega Contínua (Continuous Delivery) e Implementação Contínua (Continuous Deployment)?</div>
+    <ul class="options">
+      <li>A. Não existe diferença; os termos são sinónimos no DevOps.</li>
+      <li class="correct">B. A Entrega Contínua requer uma intervenção manual para o lançamento em produção, enquanto a Implementação Contínua é automática.</li>
+      <li>C. A Entrega Contínua não utiliza pipelines de automação.</li>
+      <li>D. A Implementação Contínua foca-se apenas em ambientes de teste.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Nos dois casos o código passa por testes automatizados e fica pronto para produção. A diferença está no "gatilho" do deploy: na Entrega Contínua alguém aperta o botão (decisão humana); na Implementação Contínua o deploy acontece sozinho assim que os testes passam.</div>
+  </div>
+
+  <div class="question-card" data-topic="Conceitos Gerais">
+    <div class="question-number">Questão 3</div>
+    <div class="question-text">Num pipeline de CI/CD, o que representa o termo 'Pipeline'?</div>
+    <ul class="options">
+      <li>A. Uma linguagem de programação utilizada para automação.</li>
+      <li>B. Uma ferramenta específica de chat para comunicação entre equipas.</li>
+      <li class="correct">C. Um conjunto de passos automatizados que o código percorre desde a submissão até à produção.</li>
+      <li>D. O hardware físico onde o código é guardado.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Pipeline é a sequência de etapas (build, teste, deploy etc.) que o código atravessa automaticamente. Pense numa "linha de montagem" do código.</div>
+  </div>
+
+  <div class="question-card" data-topic="Conceitos Gerais">
+    <div class="question-number">Questão 4</div>
+    <div class="question-text">Qual destes é um benefício direto da adoção de práticas de CI/CD?</div>
+    <ul class="options">
+      <li>A. Garantia de que o código nunca terá bugs.</li>
+      <li>B. Eliminação total da necessidade de comunicação entre programadores e operações.</li>
+      <li class="correct">C. Redução do risco em cada lançamento através de atualizações menores e frequentes.</li>
+      <li>D. Aumento do tempo necessário para realizar uma build.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Lançar mudanças pequenas e frequentes é mais fácil de testar e de reverter caso algo dê errado, reduzindo o risco de cada release. CI/CD não elimina bugs nem a comunicação entre equipas.</div>
+  </div>
+
+  <div class="question-card" data-topic="Conceitos Gerais">
+    <div class="question-number">Questão 5</div>
+    <div class="question-text">O que acontece normalmente na fase de 'Build' de um pipeline de CI?</div>
+    <ul class="options">
+      <li>A. Os servidores são desligados para manutenção.</li>
+      <li>B. O gestor de projeto aprova as novas funcionalidades.</li>
+      <li class="correct">C. O código é compilado e as dependências são resolvidas para gerar um artefato executável.</li>
+      <li>D. O software é vendido aos clientes finais.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> "Build" é literalmente a etapa de compilação: transformar o código-fonte, com suas dependências, num artefato pronto para ser testado/executado (ex.: um .jar, um binário, uma imagem Docker).</div>
+  </div>
+
+  <div class="question-card" data-topic="Conceitos Gerais">
+    <div class="question-number">Questão 6</div>
+    <div class="question-text">O que caracteriza um 'Staging Environment' num pipeline de CD?</div>
+    <ul class="options">
+      <li>A. Um ambiente isolado onde apenas são realizados testes unitários.</li>
+      <li class="correct">B. Uma réplica exata do ambiente de produção usada para testes finais antes do lançamento.</li>
+      <li>C. É o computador pessoal do programador onde o código é escrito.</li>
+      <li>D. O servidor onde o código-fonte é armazenado permanentemente.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Staging existe para simular produção o mais fielmente possível, servindo de última validação antes do lançamento real.</div>
+  </div>
+
+  <div class="question-card" data-topic="Conceitos Gerais">
+    <div class="question-number">Questão 7</div>
+    <div class="question-text">Qual é a importância dos 'Testes de Regressão' num pipeline automatizado?</div>
+    <ul class="options">
+      <li>A. Testar a velocidade de escrita dos programadores.</li>
+      <li>B. Validar apenas o design visual da aplicação.</li>
+      <li>C. Apagar o histórico de commits do repositório.</li>
+      <li class="correct">D. Garantir que novas alterações não quebraram funcionalidades que já funcionavam anteriormente.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> "Regressão" significa "voltar atrás": esses testes existem para pegar casos em que uma mudança nova quebrou algo que já funcionava.</div>
+  </div>
+
+  <h3 class="section-divider">Linux - Linha de Comando</h3>
+
+  <div class="question-card" data-topic="Linux">
+    <div class="question-number">Questão 8</div>
+    <div class="question-text">Qual comando é utilizado para listar os arquivos e subdiretórios em diretório, incluindo os arquivos ocultos?</div>
+    <ul class="options">
+      <li>A. show hidden</li>
+      <li>B. list --all</li>
+      <li>C. ls -l</li>
+      <li class="correct">D. ls -a</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> A flag <code>-a</code> ("all") do <code>ls</code> mostra também arquivos ocultos (os que começam com ponto). Já <code>-l</code> só muda o formato de exibição (lista longa), sem mostrar ocultos.</div>
+  </div>
+
+  <div class="question-card" data-topic="Linux">
+    <div class="question-number">Questão 9</div>
+    <div class="question-text">Para mudar o proprietário de um arquivo no Linux, qual comando deve ser utilizado?</div>
+    <ul class="options">
+      <li class="correct">A. chown</li>
+      <li>B. chmod</li>
+      <li>C. own</li>
+      <li>D. Chgrp</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>chown</code> = "change owner". Não confundir com <code>chmod</code> (muda permissões) nem <code>chgrp</code> (muda apenas o grupo).</div>
+  </div>
+
+  <div class="question-card" data-topic="Linux">
+    <div class="question-number">Questão 10</div>
+    <div class="question-text">Qual comando permite visualizar o conteúdo de um arquivo de texto diretamente no terminal sem abrir um editor?</div>
+    <ul class="options">
+      <li>A. touch</li>
+      <li class="correct">B. cat</li>
+      <li>C. view</li>
+      <li>D. mkdir</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>cat</code> ("concatenate") imprime o conteúdo de um arquivo direto no terminal. <code>touch</code> cria arquivos vazios e <code>mkdir</code> cria diretórios.</div>
+  </div>
+
+  <div class="question-card" data-topic="Linux">
+    <div class="question-number">Questão 11</div>
+    <div class="question-text">Como se apaga um diretório que não está vazio através da linha de comandos?</div>
+    <ul class="options">
+      <li>A. delete --all</li>
+      <li>B. remove -dir</li>
+      <li class="correct">C. rm -r</li>
+      <li>D. Rmdir</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>rmdir</code> só apaga diretórios vazios. Para remover um diretório com conteúdo é preciso <code>rm -r</code> (recursivo), que apaga tudo dentro dele também.</div>
+  </div>
+
+  <div class="question-card" data-topic="Linux">
+    <div class="question-number">Questão 12</div>
+    <div class="question-text">Qual comando é utilizado para verificar o caminho completo do diretório onde se encontra atualmente?</div>
+    <ul class="options">
+      <li class="correct">A. pwd</li>
+      <li>B. cd</li>
+      <li>C. whereami</li>
+      <li>D. path</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>pwd</code> = "print working directory", mostra o caminho absoluto de onde você está. <code>cd</code> serve para mudar de diretório, não para mostrar o atual.</div>
+  </div>
+
+  <div class="question-card" data-topic="Linux">
+    <div class="question-number">Questão 13</div>
+    <div class="question-text">Qual é o comando utilizado para pesquisar padrões de texto dentro de arquivos?</div>
+    <ul class="options">
+      <li>A. locate</li>
+      <li>B. search</li>
+      <li>C. find</li>
+      <li class="correct">D. grep</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>grep</code> busca padrões de texto (inclusive expressões regulares) dentro do conteúdo dos arquivos. <code>find</code> busca arquivos pelo nome/atributos, não pelo conteúdo.</div>
+  </div>
+
+  <div class="question-card" data-topic="Linux">
+    <div class="question-number">Questão 14</div>
+    <div class="question-text">Para dar permissão total (leitura, escrita e execução) a todos os usuários num arquivo, qual comando chmod deve ser usado?</div>
+    <ul class="options">
+      <li>A. chmod +x</li>
+      <li>B. chmod 666</li>
+      <li class="correct">C. chmod 777</li>
+      <li>D. chmod full</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Cada dígito representa dono/grupo/outros, e 7 = leitura(4)+escrita(2)+execução(1). <code>777</code> dá todas as permissões a todo mundo. <code>666</code> não inclui execução.</div>
+  </div>
+
+  <div class="question-card" data-topic="Linux">
+    <div class="question-number">Questão 15</div>
+    <div class="question-text">Como se pode criar um arquivo vazio chamado 'notas.txt' de forma rápida?</div>
+    <ul class="options">
+      <li>A. new notas.txt</li>
+      <li>B. cp notas.txt</li>
+      <li class="correct">C. touch notas.txt</li>
+      <li>D. mkfile notas.txt</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>touch</code> cria um arquivo vazio (ou atualiza a data de modificação se já existir). É o jeito padrão e rápido no Linux.</div>
+  </div>
+
+  <div class="question-card" data-topic="Linux">
+    <div class="question-number">Questão 16</div>
+    <div class="question-text">Qual comando é usado para mover ou renomear arquivos e diretórios?</div>
+    <ul class="options">
+      <li class="correct">A. mv</li>
+      <li>B. rn</li>
+      <li>C. move</li>
+      <li>D. cp</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>mv</code> ("move") serve tanto para mover quanto para renomear (renomear é só "mover" para o mesmo lugar com outro nome). <code>cp</code> copia, não move.</div>
+  </div>
+
+  <h3 class="section-divider">Docker</h3>
+
+  <div class="question-card" data-topic="Docker">
+    <div class="question-number">Questão 17</div>
+    <div class="question-text">Qual é a principal diferença entre uma Imagem Docker e um Container Docker?</div>
+    <ul class="options">
+      <li>A. Uma imagem é uma instância em execução, enquanto um Container é o modelo estático armazenado no disco.</li>
+      <li>B. Imagens são usadas apenas em ambiente de desenvolvimento e Containeres apenas em produção.</li>
+      <li>C. Não há diferença técnica, são apenas nomes diferentes para o mesmo conceito de virtualização.</li>
+      <li class="correct">D. Uma imagem é um modelo de leitura apenas (read-only), enquanto um Container é uma instância executável baseada nessa imagem.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Pense na imagem como uma "planta"/molde imutável, e o container como uma "casa construída" a partir dessa planta, em execução. Você pode criar vários containers a partir da mesma imagem.</div>
+  </div>
+
+  <div class="question-card" data-topic="Docker">
+    <div class="question-number">Questão 18</div>
+    <div class="question-text">Qual é o objetivo principal do arquivo 'Dockerfile'?</div>
+    <ul class="options">
+      <li>A. Listar todos os Containers que estão atualmente em execução no host.</li>
+      <li>B. Gerir as permissões de utilizador dentro do Docker Hub.</li>
+      <li>C. Monitorizar o desempenho dos Containers em tempo real.</li>
+      <li class="correct">D. Contém as instruções necessárias para criar automaticamente uma imagem Docker.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> O Dockerfile é uma "receita": lista passo a passo (FROM, COPY, RUN, CMD...) como montar a imagem automaticamente.</div>
+  </div>
+
+  <div class="question-card" data-topic="Docker">
+    <div class="question-number">Questão 19</div>
+    <div class="question-text">No Docker, para que servem os 'Volumes'?</div>
+    <ul class="options">
+      <li>A. Para limitar a quantidade de memória RAM que um Container pode utilizar.</li>
+      <li class="correct">B. Para persistir dados gerados por um Container além do seu ciclo de vida.</li>
+      <li>C. Para isolar o tráfego de rede entre diferentes Containers.</li>
+      <li>D. Para aumentar a velocidade de processamento da CPU do Container.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Por padrão, dados dentro de um container somem quando ele é removido. Volumes gravam esses dados fora do container (no host ou num volume gerenciado), fazendo-os sobreviver mesmo se o container for apagado.</div>
+  </div>
+
+  <div class="question-card" data-topic="Docker">
+    <div class="question-number">Questão 20</div>
+    <div class="question-text">Qual comando é utilizado para baixar uma imagem do Docker Hub para a sua máquina local sem necessariamente instanciar um container com base nela?</div>
+    <ul class="options">
+      <li>A. docker build</li>
+      <li>B. docker run</li>
+      <li class="correct">C. docker pull</li>
+      <li>D. docker push</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>docker pull</code> só baixa a imagem. <code>docker run</code> baixa (se não existir localmente) e já cria/inicia um container. <code>docker push</code> faz o caminho inverso (envia para o registro).</div>
+  </div>
+
+  <div class="question-card" data-topic="Docker">
+    <div class="question-number">Questão 21</div>
+    <div class="question-text">Qual é a principal diferença entre um Container Docker e uma Máquina Virtual (VM)?</div>
+    <ul class="options">
+      <li>A. As VMs inicializam mais rapidamente do que os Containers Docker.</li>
+      <li class="correct">B. Os Containers partilham o kernel do sistema operacional anfitrião (host), enquanto as VMs incluem um SO completo.</li>
+      <li>C. Os Containers Docker requerem um Hypervisor como o VMware ou VirtualBox.</li>
+      <li>D. Não existe diferença de performance entre ambos.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Containers virtualizam só a aplicação e reutilizam o kernel do host, por isso são leves e rápidos. VMs carregam um sistema operacional inteiro por cima de um hypervisor, o que é mais pesado e lento para iniciar.</div>
+  </div>
+
+  <div class="question-card" data-topic="Docker">
+    <div class="question-number">Questão 22</div>
+    <div class="question-text">Qual é o comando utilizado para criar uma imagem a partir de um arquivo 'Dockerfile'?</div>
+    <ul class="options">
+      <li>A. docker create</li>
+      <li>B. docker run</li>
+      <li class="correct">C. docker build</li>
+      <li>D. docker push</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>docker build</code> lê o Dockerfile e gera a imagem. É diferente de <code>docker run</code>, que usa uma imagem já pronta para criar um container.</div>
+  </div>
+
+  <div class="question-card" data-topic="Docker">
+    <div class="question-number">Questão 23</div>
+    <div class="question-text">No Docker, o que acontece aos dados guardados dentro de um Container quando este é removido, caso não tenham sido utilizados volumes?</div>
+    <ul class="options">
+      <li class="correct">A. Os dados são perdidos permanentemente.</li>
+      <li>B. Os dados são movidos automaticamente para o Docker Hub.</li>
+      <li>C. O Docker impede a remoção do Container se houver arquivos novos.</li>
+      <li>D. Os dados persistem no disco do anfitrião (host) para sempre.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Sem volume, os arquivos ficam só na camada de escrita do container. Ao remover o container, essa camada some e os dados se perdem — por isso volumes existem.</div>
+  </div>
+
+  <div class="question-card" data-topic="Docker">
+    <div class="question-number">Questão 24</div>
+    <div class="question-text">Qual instrução do Dockerfile define o comando padrão que será executado quando o Container for iniciado?</div>
+    <ul class="options">
+      <li>A. FROM</li>
+      <li>B. RUN</li>
+      <li class="correct">C. CMD</li>
+      <li>D. EXPOSE</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>FROM</code> define a imagem base, <code>RUN</code> executa comandos durante a construção da imagem, <code>EXPOSE</code> só documenta portas. <code>CMD</code> é o processo que roda quando o container é iniciado.</div>
+  </div>
+
+  <div class="question-card" data-topic="Docker">
+    <div class="question-number">Questão 25</div>
+    <div class="question-text">Qual é a principal diferença entre o comando 'docker run' e 'docker start'?</div>
+    <ul class="options">
+      <li>A. O 'docker start' é utilizado apenas para containers em modo 'detached'.</li>
+      <li class="correct">B. O 'docker run' cria e inicia um novo container a partir de uma imagem, enquanto o 'docker start' inicia um container que já existe e está parado.</li>
+      <li>C. O 'docker run' apenas descarrega a imagem, enquanto o 'docker start' executa o processo principal.</li>
+      <li>D. Não há diferença, são sinónimos utilizados em versões diferentes do Docker.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>run</code> = criar (a partir da imagem) + iniciar. <code>start</code> = apenas religar um container que já existia e estava parado, sem criar um novo.</div>
+  </div>
+
+  <div class="question-card" data-topic="Docker">
+    <div class="question-number">Questão 26</div>
+    <div class="question-text">No contexto de um Dockerfile, para que serve a instrução 'EXPOSE'?</div>
+    <ul class="options">
+      <li class="correct">A. Para indicar em que portas o container escuta em tempo de execução, servindo como documentação.</li>
+      <li>B. Para definir a variável de ambiente da porta de rede da aplicação.</li>
+      <li>C. Para abrir automaticamente a porta no host e mapeá-la para o mundo exterior.</li>
+      <li>D. Para permitir que o container aceda à rede internet do host.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> EXPOSE é apenas informativo/documental. Quem realmente abre a porta para o host é a flag <code>-p</code> do <code>docker run</code>.</div>
+  </div>
+
+  <div class="question-card" data-topic="Docker">
+    <div class="question-number">Questão 27</div>
+    <div class="question-text">O que acontece se for executado o comando 'docker run -d nginx'?</div>
+    <ul class="options">
+      <li class="correct">A. O container é executado em segundo plano (background).</li>
+      <li>B. O Docker apaga o container imediatamente após a execução (deletable).</li>
+      <li>C. O container é executado com privilégios de administrador (debug mode).</li>
+      <li>D. O container é executado em modo interativo com um terminal aberto.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> A flag <code>-d</code> significa "detached" (segundo plano). Apagar automaticamente é a flag <code>--rm</code>, e modo interativo com terminal é <code>-it</code>.</div>
+  </div>
+
+  <div class="question-card" data-topic="Docker">
+    <div class="question-number">Questão 28</div>
+    <div class="question-text">Qual é a vantagem de utilizar 'Multi-stage builds' num Dockerfile?</div>
+    <ul class="options">
+      <li class="correct">A. Reduz o tamanho da imagem final ao separar o ambiente de compilação do ambiente de execução, copiando apenas o necessário.</li>
+      <li>B. Torna obrigatório o uso de Docker Compose para construir a aplicação.</li>
+      <li>C. Aumenta a velocidade de download das imagens base originais.</li>
+      <li>D. Permite executar múltiplos Containers ao mesmo tempo a partir do mesmo Dockerfile.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Com multi-stage você usa um estágio "pesado" (com compiladores, dependências de build) só para gerar o artefato, e depois copia apenas esse artefato para uma imagem final leve (ex.: nginx:alpine), descartando tudo que não é necessário em produção.</div>
+  </div>
+
+  <h3 class="section-divider">Git</h3>
+
+  <div class="question-card" data-topic="Git">
+    <div class="question-number">Questão 29</div>
+    <div class="question-text">Qual comando é utilizado para criar um novo repositório Git local num diretório existente?</div>
+    <ul class="options">
+      <li class="correct">A. git init</li>
+      <li>B. git start</li>
+      <li>C. git clone</li>
+      <li>D. git create</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>git init</code> transforma uma pasta comum num repositório Git. <code>git clone</code> é para copiar um repositório remoto já existente, não para criar um do zero.</div>
+  </div>
+
+  <div class="question-card" data-topic="Git">
+    <div class="question-number">Questão 30</div>
+    <div class="question-text">Após alterar um arquivo, qual comando é usado para adicioná-lo à 'Staging Area' antes do commit?</div>
+    <ul class="options">
+      <li>A. git push</li>
+      <li class="correct">B. git add</li>
+      <li>C. git commit</li>
+      <li>D. git stage</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>git add</code> move as mudanças para a área de staging (o "carrinho" antes de fechar a compra). Só depois de adicionado é que o <code>git commit</code> registra a mudança no histórico.</div>
+  </div>
+
+  <div class="question-card" data-topic="Git">
+    <div class="question-number">Questão 31</div>
+    <div class="question-text">Como se pode verificar o estado atual do repositório, vendo quais arquivos foram modificados ou estão na staging area?</div>
+    <ul class="options">
+      <li>A. git log</li>
+      <li class="correct">B. git status</li>
+      <li>C. git show</li>
+      <li>D. git check</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>git status</code> é o "raio-x" do momento: mostra o que mudou, o que está staged e o que não está. <code>git log</code> mostra o histórico de commits, não o estado atual.</div>
+  </div>
+
+  <div class="question-card" data-topic="Git">
+    <div class="question-number">Questão 32</div>
+    <div class="question-text">Qual comando cria um novo 'branch' (ramo) e muda para ele imediatamente?</div>
+    <ul class="options">
+      <li>A. git merge novo-ramo</li>
+      <li>B. git branch novo-ramo</li>
+      <li class="correct">C. git checkout -b novo-ramo</li>
+      <li>D. git switch novo-ramo</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>git branch</code> sozinho só cria o branch, sem mudar para ele. A flag <code>-b</code> do <code>checkout</code> faz as duas coisas: cria e já muda. (Equivalente moderno: <code>git switch -c</code>.)</div>
+  </div>
+
+  <div class="question-card" data-topic="Git">
+    <div class="question-number">Questão 33</div>
+    <div class="question-text">Para baixar as alterações de um repositório remoto e mesclá-las automaticamente no seu ramo (Branch) local atual, qual comando usa?</div>
+    <ul class="options">
+      <li>A. git fetch</li>
+      <li class="correct">B. git pull</li>
+      <li>C. git push</li>
+      <li>D. git remote -v</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>git pull</code> = <code>git fetch</code> + <code>git merge</code> automático. O <code>fetch</code> sozinho só baixa as referências, sem mesclar no seu branch.</div>
+  </div>
+
+  <div class="question-card" data-topic="Git">
+    <div class="question-number">Questão 34</div>
+    <div class="question-text">Como se visualiza o histórico completo de commits de um projeto?</div>
+    <ul class="options">
+      <li>A. git history</li>
+      <li>B. git status</li>
+      <li class="correct">C. git log</li>
+      <li>D. git list</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>git log</code> lista os commits em ordem cronológica, com autor, data e mensagem.</div>
+  </div>
+
+  <div class="question-card" data-topic="Git">
+    <div class="question-number">Questão 35</div>
+    <div class="question-text">Qual comando é usado para enviar as suas alterações locais confirmadas para o repositório remoto?</div>
+    <ul class="options">
+      <li>A. git commit</li>
+      <li>B. git remote sync</li>
+      <li>C. git upload</li>
+      <li class="correct">D. git push</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>git commit</code> só registra localmente. Para mandar isso para o servidor remoto (ex.: GitHub) é preciso <code>git push</code>.</div>
+  </div>
+
+  <div class="question-card" data-topic="Git">
+    <div class="question-number">Questão 36</div>
+    <div class="question-text">Qual comando mescla o conteúdo de um ramo específico (ex: 'feature') no ramo atual (ex: 'main')?</div>
+    <ul class="options">
+      <li>A. git pull feature</li>
+      <li>B. git join feature</li>
+      <li class="correct">C. git merge feature</li>
+      <li>D. git combine feature</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Estando em "main", <code>git merge feature</code> traz e combina as mudanças do branch "feature" para dentro do branch atual.</div>
+  </div>
+
+  <div class="question-card" data-topic="Git">
+    <div class="question-number">Questão 37</div>
+    <div class="question-text">Qual é a função do comando 'git remote add origin &lt;url&gt;'?</div>
+    <ul class="options">
+      <li>A. Cria um novo repositório no GitHub automaticamente.</li>
+      <li>B. Faz o download imediato de todo o código do servidor.</li>
+      <li>C. Apaga todas as versões anteriores do código no servidor.</li>
+      <li class="correct">D. Vincula o seu repositório local a um repositório remoto específico, dando-lhe o nome de 'origin'.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Esse comando só cria a referência/apelido ("origin") apontando para uma URL remota. Ele não cria repositório nem baixa nada sozinho — quem baixa é o <code>fetch</code>/<code>pull</code>.</div>
+  </div>
+
+  <div class="question-card" data-topic="Git">
+    <div class="question-number">Questão 38</div>
+    <div class="question-text">Se apagou acidentalmente um arquivo e ainda não fez commit, qual comando (nas versões mais recentes do Git) é recomendado para restaurar esse arquivo?</div>
+    <ul class="options">
+      <li>A. git back</li>
+      <li class="correct">B. git restore &lt;nome_do_arquivo&gt;</li>
+      <li>C. git clean -f</li>
+      <li>D. git remove –undo</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>git restore</code> é o comando moderno para desfazer mudanças não commitadas em um arquivo, trazendo-o de volta ao último estado salvo. <code>git clean -f</code> remove arquivos não rastreados (o oposto do que queremos aqui).</div>
+  </div>
+
+  <h3 class="section-divider">GitHub Actions</h3>
+
+  <div class="question-card" data-topic="GitHub Actions">
+    <div class="question-number">Questão 39</div>
+    <div class="question-text">Em qual diretório do repositório e com qual extensão os arquivos de workflow do GitHub Actions devem ser salvos?</div>
+    <ul class="options">
+      <li>A. .github/pipelines/ com extensão .json</li>
+      <li class="correct">B. .github/workflows/ com extensão .yml</li>
+      <li>C. config/actions/ com extensão .xml</li>
+      <li>D. .workflows/github/ com extensão .sh</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> É uma convenção fixa do GitHub: os arquivos de workflow ficam em <code>.github/workflows/</code> e são escritos em YAML (.yml ou .yaml).</div>
+  </div>
+
+  <div class="question-card" data-topic="GitHub Actions">
+    <div class="question-number">Questão 40</div>
+    <div class="question-text">Por padrão, de que maneira múltiplos jobs definidos dentro de um mesmo arquivo de workflow são executados se nenhuma dependência for especificada?</div>
+    <ul class="options">
+      <li>A. Em sequência, na ordem em que aparecem no arquivo.</li>
+      <li>B. De forma aleatória, dependendo da disponibilidade dos servidores.</li>
+      <li class="correct">C. Em paralelo, executando simultaneamente.</li>
+      <li>D. Apenas o primeiro job executa, cancelando os demais.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Sem usar <code>needs</code>, o GitHub Actions assume que os jobs são independentes e os roda todos ao mesmo tempo, em runners separados, para ganhar velocidade.</div>
+  </div>
+
+  <div class="question-card" data-topic="GitHub Actions">
+    <div class="question-number">Questão 41</div>
+    <div class="question-text">Qual palavra-chave do YAML é utilizada na definição de um job para indicar que ele depende da conclusão bem-sucedida de outro job antes de iniciar?</div>
+    <ul class="options">
+      <li>A. depends_on</li>
+      <li>B. after</li>
+      <li>C. requires</li>
+      <li class="correct">D. needs</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>needs: [nome_do_job]</code> faz um job esperar outro terminar (com sucesso) antes de começar, criando uma sequência.</div>
+  </div>
+
+  <div class="question-card" data-topic="GitHub Actions">
+    <div class="question-number">Questão 42</div>
+    <div class="question-text">Como o GitHub Actions gerencia os dados armazenados na seção de Secrets do repositório para garantir a segurança?</div>
+    <ul class="options">
+      <li>A. Salva em texto claro e permite visualização a qualquer momento na interface do GitHub.</li>
+      <li class="correct">B. Criptografa os valores e exibe *** nos logs caso algum comando tente exibi-los.</li>
+      <li>C. Permite acesso apenas para usuários com perfil de administrador do sistema operacional.</li>
+      <li>D. Armazena os valores em arquivos públicos no diretório .github/workflows.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Secrets são criptografados no GitHub e o próprio sistema de logs mascara automaticamente qualquer valor de secret que apareça na saída, mostrando <code>***</code>.</div>
+  </div>
+
+  <div class="question-card" data-topic="GitHub Actions">
+    <div class="question-number">Questão 43</div>
+    <div class="question-text">Qual evento (on:) permite adicionar um botão chamado "Run workflow" na interface do GitHub para disparar a automação manualmente?</div>
+    <ul class="options">
+      <li>A. manual_trigger</li>
+      <li>B. repository_dispatch</li>
+      <li class="correct">C. workflow_dispatch</li>
+      <li>D. push</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>workflow_dispatch</code> é o evento que habilita o disparo manual pela interface do GitHub (o botão "Run workflow"). <code>repository_dispatch</code> é para disparos via API externa, não pelo botão da UI.</div>
+  </div>
+
+  <div class="question-card" data-topic="GitHub Actions">
+    <div class="question-number">Questão 44</div>
+    <div class="question-text">Qual função de status em condicionais (if:) garante que uma etapa de limpeza (cleanup) seja executada sempre, independentemente de sucesso, falha ou cancelamento das etapas anteriores?</div>
+    <ul class="options">
+      <li class="correct">A. always()</li>
+      <li>B. success()</li>
+      <li>C. failure()</li>
+      <li>D. cancelled()</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>always()</code> ignora o resultado das etapas anteriores e faz aquela etapa rodar sempre — ideal para limpeza de recursos ou notificações finais.</div>
+  </div>
+
+  <div class="question-card" data-topic="GitHub Actions">
+    <div class="question-number">Questão 45</div>
+    <div class="question-text">O que a expressão POSIX cron '0 0 * * *' configura ao ser utilizada em um evento agendado (schedule)?</div>
+    <ul class="options">
+      <li>A. Executa o workflow a cada 15 minutos.</li>
+      <li>B. Executa o workflow toda segunda-feira às 08:00 (UTC).</li>
+      <li class="correct">C. Executa o workflow todo dia à meia-noite (UTC).</li>
+      <li>D. Executa o workflow no dia 1º de cada mês ao meio-dia.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> A ordem dos campos cron é Minuto Hora Dia-do-mês Mês Dia-da-semana. "0 0 * * *" = minuto 0, hora 0 (meia-noite UTC), todo dia, todo mês, todo dia da semana — ou seja, todos os dias à meia-noite.</div>
+  </div>
+
+  <div class="question-card" data-topic="GitHub Actions">
+    <div class="question-number">Questão 46</div>
+    <div class="question-text">Qual é a principal diferença de visibilidade e segurança entre Variáveis de repositório e Secrets?</div>
+    <ul class="options">
+      <li>A. Variáveis usam criptografia, enquanto Secrets são exibidos em texto claro nos logs.</li>
+      <li class="correct">B. Variáveis armazenam dados não sensíveis visíveis em texto claro, enquanto Secrets são criptografados e mascarados.</li>
+      <li>C. Secrets funcionam apenas no escopo global, e Variáveis funcionam apenas dentro de um step.</li>
+      <li>D. Não há diferença prática de segurança entre ambos.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> Variáveis (Variables) são para configs não sensíveis (ex.: nome de ambiente) e aparecem em texto puro. Secrets são para dados sensíveis (senhas, tokens) e ficam criptografados/mascarados.</div>
+  </div>
+
+  <div class="question-card" data-topic="GitHub Actions">
+    <div class="question-number">Questão 47</div>
+    <div class="question-text">Para configurar uma etapa de notificação ou envio de logs que deve ser executada apenas se pelo menos uma etapa anterior do mesmo job falhar, qual função de status deve ser usada?</div>
+    <ul class="options">
+      <li>A. success()</li>
+      <li class="correct">B. failure()</li>
+      <li>C. always()</li>
+      <li>D. cancelled()</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> <code>failure()</code> retorna verdadeiro só quando alguma etapa anterior falhou — ideal para disparar alertas apenas em caso de erro.</div>
+  </div>
+
+  <div class="question-card" data-topic="GitHub Actions">
+    <div class="question-number">Questão 48</div>
+    <div class="question-text">Em relação à sintaxe dos arquivos YAML no GitHub Actions, qual é a regra quanto à identação?</div>
+    <ul class="options">
+      <li>A. Deve-se utilizar obrigatoriamente a tecla TAB para alinhar os blocos.</li>
+      <li>B. Não é necessário manter identação no formato YAML.</li>
+      <li class="correct">C. Deve-se utilizar identação com espaços em branco (ex.: 2 espaços) e não utilizar a tecla TAB.</li>
+      <li>D. A identação só é exigida nas linhas iniciadas com - name:.</li>
+    </ul>
+    <div class="explanation"><strong>Por quê:</strong> YAML usa a identação para definir a hierarquia dos blocos, e essa identação precisa ser feita com espaços — caracteres TAB não são aceitos e quebram o arquivo.</div>
+  </div>
+
+  </div>
+
+  <nav class="pagination pagination-bottom"></nav>
+</main>
+
+<footer class="site-footer">Feito para ajudar nos estudos. Boa prova!</footer>
+
+<script src="js/site.js"></script>
+<script src="js/quiz.js"></script>
+<script>
+  const quizPagination = initQuizPagination('#quiz-questions', '.pagination', 10);
+  initTopicFilter('#quiz-questions', '#topic-filter', (topic) => quizPagination.setFilter(topic));
+  initPrintButton('#print-btn');
+</script>
+
+</body>
+</html>
